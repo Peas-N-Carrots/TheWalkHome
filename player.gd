@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const ACCEL_SPEED = 12
 const DECEL_SPEED = 6
-const RUN_SPEED = 4.0
+const RUN_SPEED = 2.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.0015
 const JUMP_BUFFER = 0.5
@@ -14,7 +14,7 @@ const MAX_WOBBLE = 0.005
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var trip_level : float = 0.0
+var trip_level : float = 1.0
 var time := 0.0
 
 var input_dir := Vector2.ZERO
@@ -63,6 +63,8 @@ func get_input() -> void:
 func get_jump() -> void:
 	if get_jump_frame() and get_ground_frame():
 		velocity.y = JUMP_VELOCITY
+		jump_frame = -100
+		ground_frame = -100
 
 func apply_gravity(delta: float) -> void:
 	if not is_on_floor():

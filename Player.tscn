@@ -13,6 +13,7 @@ script = ExtResource("1_xhfnw")
 shape = SubResource("CapsuleShape3D_0rwas")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564134, -0.548678)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_kpjcp")
@@ -24,6 +25,3 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.5687
 
 [node name="BodyRaycast" type="RayCast3D" parent="Rays"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.56879, 0, 0)
-
-[node name="HeadRaycast" type="RayCast3D" parent="Rays"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 1.56879, 0.721227, 0)
