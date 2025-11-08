@@ -23,12 +23,7 @@ func _process(delta: float) -> void:
 	capture_timer -= delta
 	
 	if capture_timer <= 0.0:
-		#visible = false
-		#await RenderingServer.frame_post_draw
-		
 		afterimage.update(get_viewport().get_texture().get_image())
-		
-		#visible = true
 		
 		capture_timer = capture_interval
 		blend = 0.0

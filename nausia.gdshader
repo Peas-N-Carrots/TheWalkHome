@@ -27,7 +27,7 @@ void fragment() {
 			texture(SCREEN_TEXTURE, uv + offG * STRENGTH).g,
 			texture(SCREEN_TEXTURE, uv + offB * STRENGTH).b);
 	
-	processed.rgb = mix(processed.rgb, afterimage, AFTERIMAGE_BLEND);
+	processed.rgb = mix(processed.rgb, afterimage, AFTERIMAGE_BLEND * STRENGTH);
 	
 	COLOR = processed;
 }

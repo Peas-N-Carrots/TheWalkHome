@@ -10,17 +10,22 @@ const COYOTE_TIME = 0.5
 
 const MAX_WOBBLE = 0.005
 
-@onready var camera = $Camera3D
+@onready var camera : Camera3D = $Camera3D
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var trip_level : float = 1.0
+var trip_level : float = 0.0
 var time := 0.0
 
 var input_dir := Vector2.ZERO
 
 var ground_frame := 0.0
 var jump_frame := 0.0
+
+var tripped := false
+
+@onready var col_foot : RayCast3D = $Rays/FootRaycast
+@onready var col_body : RayCast3D = $Rays/BodyRaycast
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -35,13 +40,16 @@ func _physics_process(delta):
 	time += delta
 	get_input()
 	
-	wobble_cam()
-	
-	apply_gravity(delta)
-	get_jump()
-	input_to_velocity(delta)
-	
-	move_and_slide()
+	if !tripped:
+		wobble_cam()
+		
+		apply_gravity(delta)
+		get_jump()
+		input_to_velocity(delta)
+		
+		move_and_slide()
+		
+		check_trip()
 
 func get_jump_frame() -> bool:
 	return time - jump_frame < JUMP_BUFFER
@@ -79,3 +87,9 @@ func input_to_velocity(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, DECEL_SPEED * delta)
 		velocity.z = move_toward(velocity.z, 0, DECEL_SPEED * delta)
+
+func check_trip() -> void:
+	if (col_foot.is_colliding() && !col_body.is_colliding()):
+		tripped = true
+		var tween = create_tween()
+		tween.tween_property(camera, "position", Vector3(0, 3, 5), 1.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
