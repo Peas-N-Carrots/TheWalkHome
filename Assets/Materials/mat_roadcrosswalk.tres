@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dg4jksbui8r7"]
+
+[ext_resource type="Texture2D" uid="uid://cq3tie550jpyu" path="res://Assets/Textures/tex_road_crosswalk.png" id="1_elhbn"]
+
+[resource]
+albedo_texture = ExtResource("1_elhbn")
+texture_filter = 0

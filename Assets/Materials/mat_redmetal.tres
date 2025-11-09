@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dcb2i2r06t4nr"]
+
+[ext_resource type="Texture2D" uid="uid://10enyjbyem1l" path="res://Assets/Textures/tex_red_metal.png" id="1_0y7ok"]
+
+[resource]
+albedo_texture = ExtResource("1_0y7ok")
+texture_filter = 0

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dbykqb5j7f7hm"
+path="res://.godot/imported/sm_concretebricksobj.obj-453bba28d9c4d298b454558c79077766.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sm_concretebricksobj.obj-453bba28d9c4d298b454558c79077766.mesh"]
+
+source_file="res://Assets/Meshes/sm_concretebricksobj.obj"
+dest_files=["res://.godot/imported/sm_concretebricksobj.obj-453bba28d9c4d298b454558c79077766.mesh", "res://.godot/imported/sm_concretebricksobj.obj-453bba28d9c4d298b454558c79077766.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

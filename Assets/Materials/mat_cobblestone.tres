@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dmu4lvg2jehx6"]
+
+[ext_resource type="Texture2D" uid="uid://c1u83w4mft5j" path="res://Assets/Textures/tex_cobblestone.png" id="1_pxryh"]
+
+[resource]
+albedo_texture = ExtResource("1_pxryh")
+texture_filter = 0

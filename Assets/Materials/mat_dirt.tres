@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b86uqx84r8tqj"]
+
+[ext_resource type="Texture2D" uid="uid://li2k4g4c1fh2" path="res://Assets/Textures/tex_dirt.png" id="1_nynjn"]
+
+[resource]
+albedo_texture = ExtResource("1_nynjn")
+texture_filter = 0

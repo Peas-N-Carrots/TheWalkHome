@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://der4th40iovnk"]
+
+[ext_resource type="Texture2D" uid="uid://dxy2ula20qfyg" path="res://Assets/Textures/tex_scootergreen.png" id="1_yudft"]
+
+[resource]
+albedo_texture = ExtResource("1_yudft")
+texture_filter = 0

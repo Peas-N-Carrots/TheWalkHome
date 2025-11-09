@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c7l2t8is7pnei"]
+
+[ext_resource type="Texture2D" uid="uid://k2yaml0dbs06" path="res://Assets/Textures/tex_grave.png" id="1_ppxmc"]
+
+[resource]
+albedo_texture = ExtResource("1_ppxmc")
+roughness = 0.1
+texture_filter = 0
