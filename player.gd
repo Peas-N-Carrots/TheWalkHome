@@ -8,7 +8,8 @@ const MOUSE_SENSITIVITY = 0.0015
 const JUMP_BUFFER = 0.5
 const COYOTE_TIME = 0.5
 
-const TRIP_VEL_THRESH = 0.6
+const TRIP_VEL_THRESH = 0.7
+const FALL_VEL_THRESH = 10.0
 
 const MAX_WOBBLE = 0.005
 
@@ -16,7 +17,7 @@ const MAX_WOBBLE = 0.005
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var trip_level : float = 0.0
+var trip_level : float = 1.0
 var time := 1.0
 
 var input_dir := Vector2.ZERO
@@ -60,6 +61,7 @@ func _physics_process(delta):
 		move_and_slide()
 		
 		check_trip(p_vel)
+		check_fall(p_vel)
 
 func get_jump_frame() -> bool:
 	return time - jump_frame < JUMP_BUFFER
@@ -112,10 +114,19 @@ func _on_body_area_enter(body) -> void:
 func _on_body_area_exit(body) -> void:
 	body_col = false;
 
+func check_fall(p_vel: Vector3) -> void:
+	if (-(p_vel.y - velocity.y) > FALL_VEL_THRESH && is_on_floor()):
+		die()
+
 func check_trip(p_vel: Vector3) -> void:
 	if (foot_col && !body_col && is_on_wall() &&
 	(Vector2(p_vel.x, p_vel.z).length() / RUN_SPEED) - (Vector2(velocity.x, velocity.z).length() / RUN_SPEED)
 	> TRIP_VEL_THRESH):
-		tripped = true
-		var tween = create_tween()
-		tween.tween_property(camera, "position", Vector3(0, 1.5, 2), 1.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		die()
+
+
+func die() -> void:
+		if !tripped:
+			tripped = true
+			var tween = create_tween()
+			tween.tween_property(camera, "position", Vector3(0, 1.5, 2), 1.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)

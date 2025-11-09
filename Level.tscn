@@ -59,6 +59,10 @@ sides = 15
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.67914, 0.191525, -1.18823)
 size = Vector3(1, 1, 3.37646)
 
+[node name="CSGBox3D4" type="CSGBox3D" parent="WorldItems/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 0.866618, 0.498972, 0, -0.498972, 0.866618, -0.321994, 1.30713, 9.57303)
+size = Vector3(4.88379, 4.4375, 11.7413)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="WorldItems"]
 collision_layer = 3
 
