@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cm4tk342jko46"]
+
+[ext_resource type="Texture2D" uid="uid://48kubnk15vgu" path="res://Assets/Textures/tex_windows.png" id="1_sxif3"]
+[ext_resource type="Texture2D" uid="uid://dc143qblgnwoo" path="res://Assets/Textures/tex_windows_roughness.png" id="2_1006t"]
+
+[resource]
+albedo_texture = ExtResource("1_sxif3")
+roughness_texture = ExtResource("2_1006t")
+texture_filter = 0
