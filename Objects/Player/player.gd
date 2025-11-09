@@ -124,7 +124,6 @@ func check_trip(p_vel: Vector3) -> void:
 	> TRIP_VEL_THRESH):
 		die()
 
-
 func die() -> void:
 		if !tripped:
 			tripped = true

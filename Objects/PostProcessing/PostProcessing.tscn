@@ -1,12 +1,12 @@
 [gd_scene load_steps=4 format=3 uid="uid://g72ade1xhki4"]
 
-[ext_resource type="Shader" uid="uid://b3ydn2k2jahai" path="res://nausia.gdshader" id="1_qdvbr"]
-[ext_resource type="Script" uid="uid://qexpig1gfeaa" path="res://post_process_color_rect.gd" id="2_ph12c"]
+[ext_resource type="Shader" uid="uid://b3ydn2k2jahai" path="res://Objects/PostProcessing/nausia.gdshader" id="1_qdvbr"]
+[ext_resource type="Script" uid="uid://qexpig1gfeaa" path="res://Objects/PostProcessing/post_process_color_rect.gd" id="2_ph12c"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qdvbr"]
 shader = ExtResource("1_qdvbr")
 shader_parameter/AFTERIMAGE_BLEND = 0.0
-shader_parameter/STRENGTH = 0.0
+shader_parameter/STRENGTH = 1.0
 
 [node name="PostProcessing" type="CanvasLayer"]
 
