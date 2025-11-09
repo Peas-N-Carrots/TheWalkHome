@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtl88uyktabio"]
+[gd_scene load_steps=6 format=3 uid="uid://dtl88uyktabio"]
 
 [ext_resource type="Script" uid="uid://csqohn7devma4" path="res://player.gd" id="1_xhfnw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0rwas"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kpjcp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhfnw"]
+size = Vector3(0.503082, 0.221786, 0.64209)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kpjcp"]
+size = Vector3(0.478287, 1.16105, 0.734833)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_xhfnw")
@@ -18,12 +24,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.448216, -0.548678)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_kpjcp")
 
-[node name="Rays" type="Node3D" parent="."]
+[node name="TripCheck" type="Node3D" parent="."]
 
-[node name="FootRaycast" type="RayCast3D" parent="Rays"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.000750065, -0.696685, 0)
-target_position = Vector3(0, -0.55, 0)
+[node name="FootArea" type="Area3D" parent="TripCheck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.638319, -0.500221)
+collision_layer = 0
+collision_mask = 2
 
-[node name="BodyRaycast" type="RayCast3D" parent="Rays"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.00776088, -0.165717, 0)
-target_position = Vector3(0, -0.55, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TripCheck/FootArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00267029, 0.152351, 0.178955)
+shape = SubResource("BoxShape3D_xhfnw")
+
+[node name="BodyArea" type="Area3D" parent="TripCheck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.417362, -0.500221)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TripCheck/BodyArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000282288, 0.809092, 0.132584)
+shape = SubResource("BoxShape3D_kpjcp")

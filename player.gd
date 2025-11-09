@@ -1,12 +1,14 @@
 extends CharacterBody3D
 
-const ACCEL_SPEED = 12
+const ACCEL_SPEED = 8
 const DECEL_SPEED = 6
 const RUN_SPEED = 2.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.0015
 const JUMP_BUFFER = 0.5
 const COYOTE_TIME = 0.5
+
+const TRIP_VEL_THRESH = 0.6
 
 const MAX_WOBBLE = 0.005
 
@@ -15,20 +17,26 @@ const MAX_WOBBLE = 0.005
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var trip_level : float = 0.0
-var time := 0.0
+var time := 1.0
 
 var input_dir := Vector2.ZERO
 
-var ground_frame := 0.0
-var jump_frame := 0.0
+var ground_frame := -100.0
+var jump_frame := -100.0
 
+@onready var foot_area = $TripCheck/FootArea
+@onready var body_area = $TripCheck/BodyArea
+@onready var trip_areas = $TripCheck
+var foot_col := false
+var body_col := false
 var tripped := false
-
-@onready var col_foot : RayCast3D = $Rays/FootRaycast
-@onready var col_body : RayCast3D = $Rays/BodyRaycast
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	foot_area.body_entered.connect(_on_foot_area_enter)
+	foot_area.body_exited.connect(_on_foot_area_exit)
+	body_area.body_entered.connect(_on_body_area_enter)
+	body_area.body_exited.connect(_on_body_area_exit)
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -47,9 +55,11 @@ func _physics_process(delta):
 		get_jump()
 		input_to_velocity(delta)
 		
+		var p_vel := velocity
+		
 		move_and_slide()
 		
-		check_trip()
+		check_trip(p_vel)
 
 func get_jump_frame() -> bool:
 	return time - jump_frame < JUMP_BUFFER
@@ -67,6 +77,8 @@ func get_input() -> void:
 	input_dir = Input.get_vector("Left", "Right", "Forwards", "Backwards")
 	if Input.is_action_just_pressed("Jump"): jump_frame = time
 	if is_on_floor(): ground_frame = time
+	
+	trip_areas.rotation.y = atan2(-input_dir.x, -input_dir.y)
 
 func get_jump() -> void:
 	if get_jump_frame() and get_ground_frame():
@@ -88,8 +100,22 @@ func input_to_velocity(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, DECEL_SPEED * delta)
 		velocity.z = move_toward(velocity.z, 0, DECEL_SPEED * delta)
 
-func check_trip() -> void:
-	if (col_foot.is_colliding() && !col_body.is_colliding()):
+func _on_foot_area_enter(body) -> void:
+	foot_col = true;
+
+func _on_foot_area_exit(body) -> void:
+	foot_col = false;
+
+func _on_body_area_enter(body) -> void:
+	body_col = true;
+
+func _on_body_area_exit(body) -> void:
+	body_col = false;
+
+func check_trip(p_vel: Vector3) -> void:
+	if (foot_col && !body_col && is_on_wall() &&
+	(Vector2(p_vel.x, p_vel.z).length() / RUN_SPEED) - (Vector2(velocity.x, velocity.z).length() / RUN_SPEED)
+	> TRIP_VEL_THRESH):
 		tripped = true
 		var tween = create_tween()
-		tween.tween_property(camera, "position", Vector3(0, 3, 5), 1.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		tween.tween_property(camera, "position", Vector3(0, 1.5, 2), 1.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
