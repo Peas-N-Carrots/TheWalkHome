@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsm7cjra6bely"]
+
+[ext_resource type="PackedScene" uid="uid://cgt6y3a8dafyi" path="res://Objects/Player/Animations/sm_guy.fbx" id="1_lia7b"]
+
+[node name="GuyMesh" instance=ExtResource("1_lia7b")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://chjwwcd1o2eph"]
+
+[ext_resource type="PackedScene" uid="uid://chg2htvv1a6pw" path="res://Objects/Player/Animations/Drunk Idle.fbx" id="1_40ewe"]
+
+[node name="Drunk Idle" instance=ExtResource("1_40ewe")]
