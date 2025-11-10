@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnj1m8bksu3qg"
+path="res://.godot/imported/sm_trashcanlid.obj-a2f6130168a9b41dc403a68fbb712edc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sm_trashcanlid.obj-a2f6130168a9b41dc403a68fbb712edc.mesh"]
+
+source_file="res://Assets/Meshes/Trash/sm_trashcanlid.obj"
+dest_files=["res://.godot/imported/sm_trashcanlid.obj-a2f6130168a9b41dc403a68fbb712edc.mesh", "res://.godot/imported/sm_trashcanlid.obj-a2f6130168a9b41dc403a68fbb712edc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://47e6lckj0ibf"]
+
+[ext_resource type="ArrayMesh" uid="uid://y8wb0acasskl" path="res://Assets/Meshes/Buildings/sm_base1.obj" id="1_7agpx"]
+[ext_resource type="Texture2D" uid="uid://da0b5e18imwau" path="res://Assets/Textures/tex_building7.png" id="2_7agpx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jupol"]
+albedo_texture = ExtResource("2_7agpx")
+texture_filter = 2
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_otsmg"]
+points = PackedVector3Array(-3, -1e-06, -3, -3, 2.99971, -3, 3, -1e-06, -3, -3, -1e-06, 3, -3, 3, 3, 3, 2.99971, -3, 3, -1e-06, 3, 3, 3, 3)
+
+[node name="ScnBase1" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_7agpx")
+surface_material_override/0 = SubResource("StandardMaterial3D_jupol")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_otsmg")

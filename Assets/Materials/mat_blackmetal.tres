@@ -4,4 +4,6 @@
 
 [resource]
 albedo_texture = ExtResource("1_fn7w7")
+emission = Color(0.485985, 0.408056, 0, 1)
+emission_energy_multiplier = 1.11
 texture_filter = 0
