@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ffnkhscwid45"]
+
+[ext_resource type="Texture2D" uid="uid://dk1xq4kqsgwsf" path="res://Assets/Textures/tex_shoppingcart.png" id="1_ikabk"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_ikabk")
+texture_filter = 0
