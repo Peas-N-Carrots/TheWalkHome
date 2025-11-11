@@ -1,10 +1,73 @@
-[gd_scene load_steps=9 format=3 uid="uid://dh5nb22s4p2lj"]
+[gd_scene load_steps=63 format=3 uid="uid://dh5nb22s4p2lj"]
 
 [ext_resource type="Script" uid="uid://dsxx1n5hskcnr" path="res://Levels/level.gd" id="1_24c1m"]
 [ext_resource type="PackedScene" uid="uid://dtl88uyktabio" path="res://Objects/Player/Player.tscn" id="2_wbw1h"]
 [ext_resource type="PackedScene" uid="uid://g72ade1xhki4" path="res://Objects/PostProcessing/PostProcessing.tscn" id="3_286st"]
+[ext_resource type="PackedScene" uid="uid://dsg7r7wp4f31a" path="res://Assets/Objects/Grounds/scn_road.tscn" id="3_q1ycg"]
+[ext_resource type="PackedScene" uid="uid://bfdytsv6rhhie" path="res://Assets/Objects/Grounds/scn_concretebricks.tscn" id="3_y3x56"]
+[ext_resource type="PackedScene" uid="uid://41nyrisdpguy" path="res://Assets/Objects/Grounds/scn_sidewalk.tscn" id="5_q1ycg"]
+[ext_resource type="PackedScene" uid="uid://4sdxgoyd0u64" path="res://Assets/Objects/Grounds/scn_roadcrosswalk.tscn" id="5_y3x56"]
+[ext_resource type="PackedScene" uid="uid://dby4fepct53od" path="res://Assets/Objects/Buildings/scn_base1.tscn" id="7_8mwr5"]
+[ext_resource type="PackedScene" uid="uid://cxfvuc1510bki" path="res://Assets/Objects/Buildings/scn_base2.tscn" id="8_3wkli"]
+[ext_resource type="PackedScene" uid="uid://d4aykpged3xpo" path="res://Assets/Objects/Buildings/scn_base5.tscn" id="9_jsskw"]
+[ext_resource type="PackedScene" uid="uid://c7yvxidplgfnn" path="res://Assets/Objects/Buildings/scn_base6.tscn" id="10_sdsxl"]
+[ext_resource type="PackedScene" uid="uid://47e6lckj0ibf" path="res://Assets/Objects/Buildings/scn_base7.tscn" id="11_oqb7r"]
+[ext_resource type="PackedScene" uid="uid://dgov3mdaaqqr6" path="res://Assets/Objects/Buildings/scn_base3.tscn" id="13_ysbpt"]
+[ext_resource type="PackedScene" uid="uid://bxlhuo4nnqow8" path="res://Assets/Objects/Buildings/scn_base4.tscn" id="14_5fklp"]
+[ext_resource type="PackedScene" uid="uid://c07ofoc62bprs" path="res://Assets/Objects/Buildings/scn_base9.tscn" id="15_irrfb"]
+[ext_resource type="PackedScene" uid="uid://5rkohlrcs8cp" path="res://Assets/Objects/Buildings/scn_base8.tscn" id="16_jpldl"]
+[ext_resource type="PackedScene" uid="uid://65bd5ufgow86" path="res://Assets/Objects/Buildings/scn_trim1.tscn" id="17_7ochp"]
+[ext_resource type="PackedScene" uid="uid://bvfyxfmmdojvg" path="res://Assets/Objects/Buildings/scn_trim3.tscn" id="18_6aiv5"]
+[ext_resource type="PackedScene" uid="uid://8hcqidbw1003" path="res://Assets/Objects/Buildings/scn_trim4.tscn" id="19_wjydf"]
+[ext_resource type="PackedScene" uid="uid://ddgaxi6lf550n" path="res://Assets/Objects/Buildings/scn_trim2.tscn" id="20_8r2kf"]
+[ext_resource type="PackedScene" uid="uid://b8agnusr7s4wn" path="res://Assets/Objects/Buildings/scn_trim5.tscn" id="21_8cs8j"]
+[ext_resource type="PackedScene" uid="uid://cytwymh0aeakq" path="res://Assets/Objects/Buildings/scn_storefront1.tscn" id="22_irrfb"]
+[ext_resource type="PackedScene" uid="uid://cb3vbm4xdps1n" path="res://Assets/Objects/Buildings/scn_storefront2.tscn" id="23_jpldl"]
+[ext_resource type="PackedScene" uid="uid://t1p6gm2ea2fv" path="res://Assets/Objects/Buildings/scn_storefront3.tscn" id="24_7ochp"]
+[ext_resource type="PackedScene" uid="uid://e1np43bxwjk" path="res://Assets/Objects/Buildings/scn_storefront4.tscn" id="25_6aiv5"]
+[ext_resource type="PackedScene" uid="uid://cam1joh74r8vj" path="res://Assets/Objects/Buildings/scn_storefront5.tscn" id="26_wjydf"]
+[ext_resource type="PackedScene" uid="uid://8o61tm0v7hw8" path="res://Assets/Objects/Buildings/scn_storefront6.tscn" id="27_8r2kf"]
+[ext_resource type="PackedScene" uid="uid://buhhrv15gav5v" path="res://Assets/Objects/Buildings/scn_storefront7.tscn" id="28_8cs8j"]
+[ext_resource type="PackedScene" uid="uid://bt76tr655yqwt" path="res://Assets/Objects/Buildings/scn_windowstriple2.tscn" id="29_wjydf"]
+[ext_resource type="PackedScene" uid="uid://74hd6iy04m52" path="res://Assets/Objects/Buildings/scn_windows1.tscn" id="30_8r2kf"]
+[ext_resource type="PackedScene" uid="uid://ds5n2al3a4cc7" path="res://Assets/Objects/Buildings/scn_windowstriple3.tscn" id="31_8cs8j"]
+[ext_resource type="PackedScene" uid="uid://e3cen5x4meg8" path="res://Assets/Objects/Buildings/scn_windows3.tscn" id="32_xni14"]
+[ext_resource type="PackedScene" uid="uid://dl22d3e7yt4yw" path="res://Assets/Objects/Buildings/scn_top3.tscn" id="33_8cs8j"]
+[ext_resource type="PackedScene" uid="uid://crimdim2um0g1" path="res://Assets/Objects/Buildings/scn_top4.tscn" id="34_xni14"]
+[ext_resource type="PackedScene" uid="uid://d3nstkurqn4iu" path="res://Assets/Objects/Buildings/scn_top2.tscn" id="35_d4sln"]
+[ext_resource type="PackedScene" uid="uid://do16o3ut8knu1" path="res://Assets/Objects/CityObjects/scn_dirtplot.tscn" id="36_6tgfh"]
+[ext_resource type="PackedScene" uid="uid://ckua0am2wmtv5" path="res://Assets/Objects/Buildings/scn_top1.tscn" id="36_tfyx5"]
+[ext_resource type="PackedScene" uid="uid://d2rbocaqonh2s" path="res://Assets/Objects/CityObjects/scn_bollard.tscn" id="37_6tgfh"]
+[ext_resource type="PackedScene" uid="uid://cbin1u0xwy42o" path="res://Assets/Objects/CityObjects/scn_chair.tscn" id="38_i8nle"]
+[ext_resource type="PackedScene" uid="uid://fyuknd8o15w" path="res://Assets/Objects/CityObjects/scn_table.tscn" id="39_qt3d3"]
+[ext_resource type="PackedScene" uid="uid://d236p6g4071k8" path="res://Assets/Objects/CityObjects/scn_firehydrant.tscn" id="40_kl5dn"]
+[ext_resource type="PackedScene" uid="uid://713i5we0iebb" path="res://Assets/Objects/CityObjects/scn_streetlight.tscn" id="41_gbu4j"]
+[ext_resource type="PackedScene" uid="uid://de6wrr75ijow6" path="res://Assets/Objects/Trees/scn_tree1.tscn" id="42_tjxrr"]
+[ext_resource type="PackedScene" uid="uid://dan2jlks6r3yi" path="res://Assets/Objects/Trees/scn_tree2.tscn" id="43_purpj"]
+[ext_resource type="PackedScene" uid="uid://b0q48mesw4fpw" path="res://Assets/Objects/Trees/scn_tree3.tscn" id="44_cmd4a"]
+[ext_resource type="PackedScene" uid="uid://3wt60qd48frt" path="res://Assets/Objects/Trees/scn_tree4.tscn" id="45_oe17g"]
+[ext_resource type="PackedScene" uid="uid://dc4xu1661imcd" path="res://Assets/Objects/Vehicles/scn_shoppingcart.tscn" id="47_7p35k"]
+[ext_resource type="PackedScene" uid="uid://cxle3twxb4vna" path="res://Assets/Objects/Vehicles/scn_scooter.tscn" id="48_mafg4"]
+[ext_resource type="PackedScene" uid="uid://bfv7cnbl24ryf" path="res://Assets/Objects/Trash/scn_trashcanbin.tscn" id="49_klj1x"]
+[ext_resource type="PackedScene" uid="uid://csn1aodqkbun4" path="res://Assets/Objects/Trash/scn_trashcanlid.tscn" id="50_c4ti3"]
+[ext_resource type="PackedScene" uid="uid://1iqn3wovc6uu" path="res://Assets/Objects/Trash/scn_dumpster.tscn" id="51_6unf6"]
+[ext_resource type="PackedScene" uid="uid://5mh47s05qhp7" path="res://Assets/Objects/Trash/scn_dumpsterlid2.tscn" id="52_tgq23"]
+[ext_resource type="PackedScene" uid="uid://dn27w4dx130v2" path="res://Assets/Objects/Trash/scn_dumpsterlid3.tscn" id="53_g7xeu"]
+[ext_resource type="PackedScene" uid="uid://doxvsh2rwoq8o" path="res://Assets/Objects/Fences/scn_stonewall.tscn" id="54_klj1x"]
+[ext_resource type="PackedScene" uid="uid://bpj6xacax5icl" path="res://Assets/Objects/CityObjects/scn_cobblestonestairs.tscn" id="55_c4ti3"]
+[ext_resource type="PackedScene" uid="uid://o72603tyy2g7" path="res://Assets/Objects/Vehicles/scn_car.tscn" id="56_c4ti3"]
 
-[sub_resource type="Environment" id="Environment_t7iv1"]
+[sub_resource type="Sky" id="Sky_klj1x"]
+
+[sub_resource type="Environment" id="Environment_klj1x"]
+background_mode = 2
+sky = SubResource("Sky_klj1x")
+glow_intensity = 8.0
+fog_light_energy = 10.8
+volumetric_fog_enabled = true
+volumetric_fog_albedo = Color(0.751525, 0.765053, 1, 1)
+volumetric_fog_emission = Color(0.316689, 0.314239, 0.516949, 1)
+volumetric_fog_emission_energy = 0.5
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_bexhn"]
 
@@ -23,20 +86,25 @@ map_data = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 script = ExtResource("1_24c1m")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_t7iv1")
+environment = SubResource("Environment_klj1x")
 camera_attributes = SubResource("CameraAttributesPractical_bexhn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.4967, 0)
+transform = Transform3D(0.5, 0.75, -0.433013, -7.10543e-15, 0.5, 0.866026, 0.866025, -0.433013, 0.25, 0, 3.4967, -3)
+light_color = Color(0.693415, 0.719485, 1, 1)
 shadow_enabled = true
-shadow_blur = 2.818
+shadow_blur = 1.833
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.258819, 0.933013, 0.25, 8.88178e-16, -0.258819, 0.965926, 0.965926, -0.25, -0.0669873, 0, 4, -4)
 
 [node name="WorldItems" type="Node" parent="."]
 
 [node name="CharacterBody3D" parent="WorldItems" instance=ExtResource("2_wbw1h")]
-transform = Transform3D(1.00335, 0, 0, 0, 1.00335, 0, 0, 0, 1.00335, 0, 1.42829, 0)
+transform = Transform3D(1.00335, 0, 0, 0, 1.00335, 0, 0, 0, 1.00335, 13, 2.03706, 1.43169)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="WorldItems"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 38)
 use_collision = true
 collision_layer = 3
 
@@ -74,4 +142,1495 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldItems/StaticBody3D"]
 shape = SubResource("HeightMapShape3D_bexhn")
 
+[node name="Group1_Road1" type="Node" parent="WorldItems"]
+
+[node name="ScnRoad" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 0.5, -7)
+
+[node name="ScnRoad2" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0.5, -7)
+
+[node name="ScnRoad3" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11, 0.5, -7)
+
+[node name="ScnRoad4" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 0.5, -7)
+
+[node name="ScnRoad5" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37, 0.5, -7)
+
+[node name="ScnRoad6" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 29, 0.5, -7)
+
+[node name="ScnRoad8" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13, 0.5, -7)
+
+[node name="ScnRoad10" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35, 0.5, -7)
+
+[node name="ScnRoad11" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43, 0.5, -7)
+
+[node name="ScnRoad12" parent="WorldItems/Group1_Road1" instance=ExtResource("3_q1ycg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -51, 0.5, -7)
+
+[node name="ScnRoad7" parent="WorldItems/Group1_Road1" instance=ExtResource("5_y3x56")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27, 0.5, -7)
+
+[node name="ScnRoad9" parent="WorldItems/Group1_Road1" instance=ExtResource("5_y3x56")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 21, 0.5, -7)
+
+[node name="ScnSidewalk" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1, -2)
+
+[node name="ScnSidewalk2" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -2)
+
+[node name="ScnSidewalk3" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -2)
+
+[node name="ScnSidewalk4" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1, -2)
+
+[node name="ScnSidewalk5" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -2)
+
+[node name="ScnSidewalk6" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1, -2)
+
+[node name="ScnSidewalk7" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -2)
+
+[node name="ScnSidewalk8" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -2)
+
+[node name="ScnSidewalk9" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 1, -2)
+
+[node name="ScnSidewalk10" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, -2)
+
+[node name="ScnSidewalk11" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 1, -2)
+
+[node name="ScnSidewalk12" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 1, -2)
+
+[node name="ScnSidewalk13" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, -2)
+
+[node name="ScnSidewalk14" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 1, -2)
+
+[node name="ScnSidewalk15" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1, -2)
+
+[node name="ScnSidewalk16" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, -2)
+
+[node name="ScnSidewalk17" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -2)
+
+[node name="ScnSidewalk18" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, -2)
+
+[node name="ScnSidewalk19" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, -2)
+
+[node name="ScnSidewalk20" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -2)
+
+[node name="ScnSidewalk21" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -2)
+
+[node name="ScnSidewalk22" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, -2)
+
+[node name="ScnSidewalk23" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1, -2)
+
+[node name="ScnSidewalk24" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 1, -2)
+
+[node name="ScnSidewalk25" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -2)
+
+[node name="ScnSidewalk26" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -2)
+
+[node name="ScnSidewalk27" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -2)
+
+[node name="ScnSidewalk28" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -2)
+
+[node name="ScnSidewalk29" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+
+[node name="ScnSidewalk30" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -2)
+
+[node name="ScnSidewalk31" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -2)
+
+[node name="ScnSidewalk32" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -2)
+
+[node name="ScnSidewalk33" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1, -2)
+
+[node name="ScnSidewalk34" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 1, -2)
+
+[node name="ScnSidewalk35" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 1, -2)
+
+[node name="ScnSidewalk36" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 1, -2)
+
+[node name="ScnSidewalk37" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 1, -2)
+
+[node name="ScnSidewalk38" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 1, -2)
+
+[node name="ScnSidewalk39" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 1, -2)
+
+[node name="ScnSidewalk40" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 1, -2)
+
+[node name="ScnSidewalk41" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 1, -2)
+
+[node name="ScnSidewalk42" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, -2)
+
+[node name="ScnSidewalk43" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 1, -2)
+
+[node name="ScnSidewalk44" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 1, -2)
+
+[node name="ScnSidewalk45" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 1, -2)
+
+[node name="ScnSidewalk46" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 1, -2)
+
+[node name="ScnSidewalk47" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 1, -2)
+
+[node name="ScnSidewalk48" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 1, -2)
+
+[node name="ScnSidewalk49" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1, -12)
+
+[node name="ScnSidewalk50" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -12)
+
+[node name="ScnSidewalk51" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -12)
+
+[node name="ScnSidewalk52" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1, -12)
+
+[node name="ScnSidewalk53" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -12)
+
+[node name="ScnSidewalk54" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 1, -12)
+
+[node name="ScnSidewalk55" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, -12)
+
+[node name="ScnSidewalk56" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -12)
+
+[node name="ScnSidewalk57" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 1, -12)
+
+[node name="ScnSidewalk58" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, -12)
+
+[node name="ScnSidewalk59" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 1, -12)
+
+[node name="ScnSidewalk60" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 1, -12)
+
+[node name="ScnSidewalk61" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, -12)
+
+[node name="ScnSidewalk62" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 1, -12)
+
+[node name="ScnSidewalk63" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 1, -12)
+
+[node name="ScnSidewalk64" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, -12)
+
+[node name="ScnSidewalk65" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -12)
+
+[node name="ScnSidewalk66" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, -12)
+
+[node name="ScnSidewalk67" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 1, -12)
+
+[node name="ScnSidewalk68" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -12)
+
+[node name="ScnSidewalk69" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1, -12)
+
+[node name="ScnSidewalk70" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1, -12)
+
+[node name="ScnSidewalk71" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1, -12)
+
+[node name="ScnSidewalk72" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 1, -12)
+
+[node name="ScnSidewalk73" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -12)
+
+[node name="ScnSidewalk74" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -12)
+
+[node name="ScnSidewalk75" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -12)
+
+[node name="ScnSidewalk76" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -12)
+
+[node name="ScnSidewalk77" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -12)
+
+[node name="ScnSidewalk78" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -12)
+
+[node name="ScnSidewalk79" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, -12)
+
+[node name="ScnSidewalk80" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, -12)
+
+[node name="ScnSidewalk81" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1, -12)
+
+[node name="ScnSidewalk82" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 1, -12)
+
+[node name="ScnSidewalk83" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 1, -12)
+
+[node name="ScnSidewalk84" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 1, -12)
+
+[node name="ScnSidewalk85" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 1, -12)
+
+[node name="ScnSidewalk86" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 1, -12)
+
+[node name="ScnSidewalk87" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 1, -12)
+
+[node name="ScnSidewalk88" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 1, -12)
+
+[node name="ScnSidewalk89" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 1, -12)
+
+[node name="ScnSidewalk90" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, -12)
+
+[node name="ScnSidewalk91" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 1, -12)
+
+[node name="ScnSidewalk92" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 1, -12)
+
+[node name="ScnSidewalk93" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 1, -12)
+
+[node name="ScnSidewalk94" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 1, -12)
+
+[node name="ScnSidewalk95" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 1, -12)
+
+[node name="ScnSidewalk96" parent="WorldItems/Group1_Road1" instance=ExtResource("5_q1ycg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 1, -12)
+
+[node name="ScnConcretebricks" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, 1)
+
+[node name="ScnConcretebricks2" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, 1)
+
+[node name="ScnConcretebricks3" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, 1)
+
+[node name="ScnConcretebricks4" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1, 1)
+
+[node name="ScnConcretebricks5" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 1, 1)
+
+[node name="ScnConcretebricks58" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, 5)
+
+[node name="ScnConcretebricks59" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, 5)
+
+[node name="ScnConcretebricks60" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1, 5)
+
+[node name="ScnConcretebricks61" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 1, 5)
+
+[node name="ScnConcretebricks6" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1, 1)
+
+[node name="ScnConcretebricks7" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 1)
+
+[node name="ScnConcretebricks8" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 1)
+
+[node name="ScnConcretebricks9" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 1)
+
+[node name="ScnConcretebricks10" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 1)
+
+[node name="ScnConcretebricks56" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 5)
+
+[node name="ScnConcretebricks57" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 5)
+
+[node name="ScnConcretebricks11" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, 1)
+
+[node name="ScnConcretebricks12" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 1)
+
+[node name="ScnConcretebricks53" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 5)
+
+[node name="ScnConcretebricks54" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, 9)
+
+[node name="ScnConcretebricks13" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1, 1)
+
+[node name="ScnConcretebricks51" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1, 5)
+
+[node name="ScnConcretebricks52" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1, 9)
+
+[node name="ScnConcretebricks14" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 1, 1)
+
+[node name="ScnConcretebricks15" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1, 1)
+
+[node name="ScnConcretebricks16" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1, 1)
+
+[node name="ScnConcretebricks17" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, 1)
+
+[node name="ScnConcretebricks18" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 1)
+
+[node name="ScnConcretebricks49" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 5)
+
+[node name="ScnConcretebricks50" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 9)
+
+[node name="ScnConcretebricks19" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53, 1, 1)
+
+[node name="ScnConcretebricks20" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, 1, 1)
+
+[node name="ScnConcretebricks21" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 1, 1)
+
+[node name="ScnConcretebricks22" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 1, 1)
+
+[node name="ScnConcretebricks23" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, 1, 1)
+
+[node name="ScnConcretebricks24" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 1, 1)
+
+[node name="ScnConcretebricks25" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, -15)
+
+[node name="ScnConcretebricks26" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 1, -15)
+
+[node name="ScnConcretebricks27" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, -15)
+
+[node name="ScnConcretebricks66" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, -19)
+
+[node name="ScnConcretebricks67" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, -23)
+
+[node name="ScnConcretebricks28" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1, -15)
+
+[node name="ScnConcretebricks29" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 1, -15)
+
+[node name="ScnConcretebricks30" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 1, -15)
+
+[node name="ScnConcretebricks31" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -15)
+
+[node name="ScnConcretebricks32" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -15)
+
+[node name="ScnConcretebricks33" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -15)
+
+[node name="ScnConcretebricks34" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -15)
+
+[node name="ScnConcretebricks35" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -15)
+
+[node name="ScnConcretebricks36" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, -15)
+
+[node name="ScnConcretebricks62" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, -19)
+
+[node name="ScnConcretebricks63" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -19)
+
+[node name="ScnConcretebricks64" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 1, -19)
+
+[node name="ScnConcretebricks65" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1, -19)
+
+[node name="ScnConcretebricks37" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1, -15)
+
+[node name="ScnConcretebricks55" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 1, -19)
+
+[node name="ScnConcretebricks38" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 1, -15)
+
+[node name="ScnConcretebricks39" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 1, -15)
+
+[node name="ScnConcretebricks40" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1, -15)
+
+[node name="ScnConcretebricks41" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 1, -15)
+
+[node name="ScnConcretebricks42" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, -15)
+
+[node name="ScnConcretebricks43" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53, 1, -15)
+
+[node name="ScnConcretebricks44" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, 1, -15)
+
+[node name="ScnConcretebricks45" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 1, -15)
+
+[node name="ScnConcretebricks46" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 1, -15)
+
+[node name="ScnConcretebricks47" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, 1, -15)
+
+[node name="ScnConcretebricks48" parent="WorldItems/Group1_Road1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 1, -15)
+
+[node name="Group2_BuildingRow1" type="Node" parent="WorldItems"]
+
+[node name="ScnBase1" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("13_ysbpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 6)
+
+[node name="ScnBase2" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("14_5fklp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 6)
+
+[node name="ScnBase3" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1, 6)
+
+[node name="ScnBase4" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, 6)
+
+[node name="ScnBase5" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("15_irrfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 1, 6)
+
+[node name="ScnBase6" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1, 6)
+
+[node name="ScnBase7" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("16_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 1, 6)
+
+[node name="ScnBase8" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 1, 6)
+
+[node name="ScnBase9" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, 8)
+
+[node name="ScnBase10" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("15_irrfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, 6)
+
+[node name="ScnTrim1" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 7)
+
+[node name="ScnTrim2" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 6)
+
+[node name="ScnTrim3" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+
+[node name="ScnTrim4" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 6)
+
+[node name="ScnTrim5" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 6)
+
+[node name="ScnTrim6" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, 8)
+
+[node name="ScnTrim25" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, 8)
+
+[node name="ScnTrim26" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 4, 8)
+
+[node name="ScnTrim7" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, 6)
+
+[node name="ScnTrim8" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 6)
+
+[node name="ScnTrim9" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 1, 6)
+
+[node name="ScnTrim10" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 1, 6)
+
+[node name="ScnTrim11" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 1, 6)
+
+[node name="ScnTrim27" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 4, 6)
+
+[node name="ScnTrim12" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1, 6)
+
+[node name="ScnTrim13" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, 6)
+
+[node name="ScnBase11" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("13_ysbpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, 6)
+
+[node name="ScnBase12" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("14_5fklp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, 6)
+
+[node name="ScnBase13" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, 6)
+
+[node name="ScnBase14" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 4, 6)
+
+[node name="ScnBase15" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 4, 6)
+
+[node name="ScnBase16" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("16_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 4, 6)
+
+[node name="ScnBase17" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 4, 6)
+
+[node name="ScnBase18" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 4, 8)
+
+[node name="ScnBase19" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("15_irrfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 4, 6)
+
+[node name="ScnTrim14" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 7)
+
+[node name="ScnTrim15" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 6)
+
+[node name="ScnTrim16" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 6)
+
+[node name="ScnTrim17" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, 6)
+
+[node name="ScnTrim18" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4, 6)
+
+[node name="ScnTrim19" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 4, 6)
+
+[node name="ScnTrim20" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, 6)
+
+[node name="ScnTrim21" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 4, 6)
+
+[node name="ScnTrim22" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 4, 6)
+
+[node name="ScnTrim23" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, 6)
+
+[node name="ScnTrim24" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 4, 6)
+
+[node name="ScnStorefront1" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("22_irrfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 7)
+
+[node name="ScnStorefront2" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("23_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+
+[node name="ScnStorefront3" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("24_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 1, 6)
+
+[node name="ScnStorefront4" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("25_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 6)
+
+[node name="ScnStorefront5" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("26_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 1, 6)
+
+[node name="ScnStorefront6" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("27_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, 6)
+
+[node name="ScnStorefront7" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("25_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 1, 6)
+
+[node name="ScnStorefront8" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("28_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1, 6)
+
+[node name="ScnStorefront9" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("23_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 1, 6)
+
+[node name="ScnStorefront10" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("26_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 1, 6)
+
+[node name="ScnStorefront11" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("28_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 6)
+
+[node name="ScnStorefront12" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("27_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, 8)
+
+[node name="ScnStorefront13" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("24_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, 6)
+
+[node name="ScnStorefront14" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("23_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, 8)
+
+[node name="ScnWindows1" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 4, 6)
+
+[node name="ScnWindows2" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("30_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 4, 6)
+
+[node name="ScnWindows3" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 4, 6)
+
+[node name="ScnWindows4" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("31_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 4, 6)
+
+[node name="ScnWindows5" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, 6)
+
+[node name="ScnWindows6" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("30_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, 6)
+
+[node name="ScnWindows7" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 6)
+
+[node name="ScnWindows8" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("32_xni14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4, 6)
+
+[node name="ScnWindows9" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("30_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 7)
+
+[node name="ScnWindows10" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("31_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 6)
+
+[node name="ScnWindows11" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4, 6)
+
+[node name="ScnWindows12" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 4, 8)
+
+[node name="ScnWindows13" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("31_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 4, 6)
+
+[node name="ScnTrim28" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 7, 6)
+
+[node name="ScnBase20" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("13_ysbpt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 7, 6)
+
+[node name="ScnBase21" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 7, 6)
+
+[node name="ScnBase22" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 7, 6)
+
+[node name="ScnBase23" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 7, 6)
+
+[node name="ScnBase24" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 7, 6)
+
+[node name="ScnBase25" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("15_irrfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 7, 6)
+
+[node name="ScnTrim29" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7, 7)
+
+[node name="ScnTrim30" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 7, 6)
+
+[node name="ScnTrim31" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 7, 6)
+
+[node name="ScnTrim32" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 7, 6)
+
+[node name="ScnTrim33" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 7, 6)
+
+[node name="ScnTrim34" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 7, 6)
+
+[node name="ScnTrim35" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 7, 6)
+
+[node name="ScnTrim36" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 7, 6)
+
+[node name="ScnWindows14" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 7, 6)
+
+[node name="ScnWindows15" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 7, 6)
+
+[node name="ScnWindows16" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("31_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 7, 6)
+
+[node name="ScnWindows17" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 7, 6)
+
+[node name="ScnWindows18" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("32_xni14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 7, 6)
+
+[node name="ScnWindows19" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("30_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7, 7)
+
+[node name="ScnWindows20" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("31_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 7, 6)
+
+[node name="ScnWindows21" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 7, 6)
+
+[node name="ScnTrim37" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 10, 6)
+
+[node name="ScnBase26" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 10, 6)
+
+[node name="ScnBase27" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 10, 6)
+
+[node name="ScnTrim38" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 10, 7)
+
+[node name="ScnTrim39" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 6)
+
+[node name="ScnTrim40" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 10, 6)
+
+[node name="ScnWindows23" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 10, 6)
+
+[node name="ScnWindows24" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 10, 6)
+
+[node name="ScnWindows25" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("30_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 10, 7)
+
+[node name="ScnWindows26" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("29_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 6)
+
+[node name="ScnWindows22" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("31_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 7, 6)
+
+[node name="ScnTop1" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("33_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, 1, 6)
+
+[node name="ScnTop2" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("34_xni14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, 8)
+
+[node name="ScnTop3" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("35_d4sln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 6.96325, 6)
+
+[node name="ScnTop4" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("36_tfyx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 3.96325, 8)
+
+[node name="ScnBase46" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 1, 12)
+
+[node name="ScnTrim45" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 1, 12)
+
+[node name="ScnTrim46" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 4, 12)
+
+[node name="ScnBase47" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 4, 12)
+
+[node name="ScnTop18" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("36_tfyx5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 3.96325, 12)
+
+[node name="ScnTop5" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("33_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 9.96325, 6)
+
+[node name="ScnTop6" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("34_xni14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 6.96325, 6)
+
+[node name="ScnTop7" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("35_d4sln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 9.96325, 7)
+
+[node name="ScnTop8" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("35_d4sln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.96325, 6)
+
+[node name="ScnTop9" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("36_tfyx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 6.96325, 6)
+
+[node name="ScnTop10" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("33_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 3.96325, 6)
+
+[node name="ScnTop11" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("35_d4sln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 9.96325, 6)
+
+[node name="ScnBase42" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 12)
+
+[node name="ScnTrim41" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 12)
+
+[node name="ScnBase43" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, 12)
+
+[node name="ScnTrim42" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, 12)
+
+[node name="ScnTop16" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("35_d4sln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.96325, 12)
+
+[node name="ScnTop12" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("36_tfyx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 6.96325, 6)
+
+[node name="ScnTop13" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("33_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 9.96325, 6)
+
+[node name="ScnTop14" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("35_d4sln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 6.96325, 6)
+
+[node name="ScnBase44" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 1, 12)
+
+[node name="ScnTrim43" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 1, 12)
+
+[node name="ScnBase45" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 4, 12)
+
+[node name="ScnTrim44" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 4, 12)
+
+[node name="ScnTop17" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("35_d4sln")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 3.96325, 12)
+
+[node name="ScnTop15" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("36_tfyx5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 3.96325, 6)
+
+[node name="ScnBase28" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 6)
+
+[node name="ScnBase29" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("8_3wkli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 7)
+
+[node name="ScnBase30" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6)
+
+[node name="ScnBase31" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, 6)
+
+[node name="ScnBase32" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 6)
+
+[node name="ScnBase33" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("8_3wkli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 4, 7)
+
+[node name="ScnBase34" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 6)
+
+[node name="ScnBase35" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4, 6)
+
+[node name="ScnBase36" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 7, 6)
+
+[node name="ScnBase37" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("8_3wkli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7, 7)
+
+[node name="ScnBase38" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 7, 6)
+
+[node name="ScnBase39" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("8_3wkli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 10, 7)
+
+[node name="ScnBase40" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 6)
+
+[node name="ScnBase41" parent="WorldItems/Group2_BuildingRow1" instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 1, 8)
+
+[node name="Group3_CityDeco1" type="Node" parent="WorldItems"]
+
+[node name="ScnDirtplot" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
+
+[node name="ScnBollard" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("37_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 1, -2)
+
+[node name="ScnBollard2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("37_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -2)
+
+[node name="ScnBollard3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("37_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 1, -2)
+
+[node name="ScnBollard4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("37_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 1, -2)
+
+[node name="ScnChair" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.338114, 0, -0.941105, 0, 1, 0, 0.941105, 0, 0.338114, 32.8737, 1, 2.25445)
+
+[node name="ScnTable" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("39_qt3d3")]
+transform = Transform3D(0.986974, 0, 0.16088, 0, 1, 0, -0.16088, 0, 0.986974, 31.8593, 1, 2.51529)
+
+[node name="ScnChair2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.307888, 0, 0.951423, 0, 1, 0, -0.951423, 0, 0.307888, 26.6408, 1, 0.447487)
+
+[node name="ScnChair6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.2117, 0, -0.977335, 0, 1, 0, 0.977335, 0, 0.2117, 28.6282, 1, 0.671431)
+
+[node name="ScnTable3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("39_qt3d3")]
+transform = Transform3D(0.993711, 0, -0.111972, 0, 1, 0, 0.111972, 0, 0.993711, 27.6345, 1, 0.559459)
+
+[node name="ScnChair10" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.0479781, 0, 0.998848, 0, 1, 0, -0.998848, 0, 0.0479781, 30.19, 1, -0.0458964)
+
+[node name="ScnChair11" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(-0.213866, 0, -0.976863, 0, 1, 0, 0.976863, 0, -0.213866, 32.1774, 1, 0.178047)
+
+[node name="ScnTable5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("39_qt3d3")]
+transform = Transform3D(0.993711, 0, -0.111972, 0, 1, 0, 0.111972, 0, 0.993711, 31.1837, 1, 0.0660756)
+
+[node name="ScnChair7" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(-0.244952, 0, 0.969535, 0, 1, 0, -0.969535, 0, -0.244952, 30.9581, 1, 2.94866)
+
+[node name="ScnChair12" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(-0.921877, 0, -0.387483, 0, 1, 0, 0.387483, 0, -0.921877, 32.1117, 1, 3.43632)
+
+[node name="ScnChair13" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(-0.992876, 0, -0.119149, 0, 1, 0, 0.119149, 0, -0.992876, 26.5921, 1, 4.21422)
+
+[node name="ScnChair14" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.95064, 0, -0.310295, 0, 1, 0, 0.310295, 0, 0.95064, 26.8546, 1, 2.1504)
+
+[node name="ScnChair8" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(-0.261566, 0, -0.965186, 0, 1, 0, 0.965186, 0, -0.261566, 27.6068, 1, 3.21511)
+
+[node name="ScnTable4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("39_qt3d3")]
+transform = Transform3D(0.987016, 0, -0.160622, 0, 1, 0, 0.160622, 0, 0.987016, 26.6198, 1, 3.05448)
+
+[node name="ScnChair9" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.354226, 0, 0.93516, 0, 1, 0, -0.93516, 0, 0.354226, 25.6328, 1, 2.89386)
+
+[node name="ScnChair3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 26.1208, 1, -0.614338)
+
+[node name="ScnChair5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(0.258819, -0.524949, 0.810827, 3.72529e-09, -0.83943, -0.543467, 0.965926, 0.14066, -0.217261, 28.0632, 1.89464, -1.93248)
+
+[node name="ScnTable2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("39_qt3d3")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 25.1549, 1, -0.355518)
+
+[node name="ScnChair4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("38_i8nle")]
+transform = Transform3D(-0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258819, 24.1889, 1, -0.0966994)
+
+[node name="ScnDirtplot2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1, 0)
+
+[node name="ScnDirtplot3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1, 0)
+
+[node name="ScnDirtplot4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, 1, 0)
+
+[node name="ScnDirtplot5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -14)
+
+[node name="ScnDirtplot6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 1, -14)
+
+[node name="ScnDirtplot7" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -14)
+
+[node name="ScnDirtplot8" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 1, -14)
+
+[node name="ScnFirehydrant" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("40_kl5dn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -2)
+
+[node name="ScnStreetlight" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -1)
+
+[node name="ScnStreetlight7" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 1, -1)
+
+[node name="ScnStreetlight8" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, -1)
+
+[node name="ScnStreetlight9" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1, -1)
+
+[node name="ScnStreetlight10" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1, -1)
+
+[node name="ScnStreetlight11" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 1, -1)
+
+[node name="ScnStreetlight12" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, -13)
+
+[node name="ScnStreetlight13" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -13)
+
+[node name="ScnStreetlight18" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -13)
+
+[node name="ScnStreetlight19" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 1, -13)
+
+[node name="ScnStreetlight20" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 1, -13)
+
+[node name="ScnStreetlight21" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 1, -13)
+
+[node name="ScnStreetlight22" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 1, -13)
+
+[node name="ScnStreetlight23" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47, 1, -13)
+
+[node name="ScnStreetlight24" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53, 1, -13)
+
+[node name="ScnStreetlight14" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 1, -13)
+
+[node name="ScnStreetlight15" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 1, -13)
+
+[node name="ScnStreetlight16" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 1, -13)
+
+[node name="ScnStreetlight17" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -13)
+
+[node name="ScnStreetlight2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -1)
+
+[node name="ScnStreetlight3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 1, -1)
+
+[node name="ScnStreetlight4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 1, -1)
+
+[node name="ScnStreetlight5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 1, -1)
+
+[node name="ScnStreetlight6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("41_gbu4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 1, -1)
+
+[node name="ScnTree1" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("42_tjxrr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8492, 1.47425, -0.0705903)
+
+[node name="ScnTree2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("43_purpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.1199, 1.5066, -0.141333)
+
+[node name="ScnTree3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("44_cmd4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.029, 1.15137, -0.295581)
+
+[node name="ScnTree4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("45_oe17g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.273, 1.3673, -14.1782)
+
+[node name="ScnTree5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("42_tjxrr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0178, 1.18568, -14.3174)
+
+[node name="ScnTree6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("43_purpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.97057, 1.56619, -0.172847)
+
+[node name="ScnTree7" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("44_cmd4a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9455, 1.47925, -14.1166)
+
+[node name="ScnTree8" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("45_oe17g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8311, 1.51231, -14.1099)
+
+[node name="ScnShoppingcart" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("47_7p35k")]
+transform = Transform3D(-0.455902, 0, 0.89003, 0, 1, 0, -0.89003, 0, -0.455902, -7.94218, 1, 1.90734)
+
+[node name="ScnShoppingcart2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("47_7p35k")]
+transform = Transform3D(-0.455902, 0, 0.89003, 0, 1, 0, -0.89003, 0, -0.455902, -7.49631, 1, 1.67895)
+
+[node name="ScnShoppingcart3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("47_7p35k")]
+transform = Transform3D(-0.455902, 0, 0.89003, 0, 1, 0, -0.89003, 0, -0.455902, -7.01548, 1, 1.43265)
+
+[node name="ScnShoppingcart4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("47_7p35k")]
+transform = Transform3D(-0.455902, 0, 0.89003, 0, 1, 0, -0.89003, 0, -0.455902, -6.6032, 1, 1.22147)
+
+[node name="ScnShoppingcart5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("47_7p35k")]
+transform = Transform3D(0.614836, 0, 0.788655, 0, 1, 0, -0.788655, 0, 0.614836, -3.50747, 1, 1.4473)
+
+[node name="ScnShoppingcart6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("47_7p35k")]
+transform = Transform3D(0.614836, 0, 0.788655, 0, 1, 0, -0.788655, 0, 0.614836, -8.81283, 1, -1.0797)
+
+[node name="ScnShoppingcart7" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("47_7p35k")]
+transform = Transform3D(0.0762582, 0.610574, 0.788279, -0.996079, 0.082211, 0.032683, -0.0448498, -0.787681, 0.614449, -2.87415, 1.28759, -0.756482)
+
+[node name="ScnScooter" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("48_mafg4")]
+transform = Transform3D(0.704795, 0, 0.709411, 0, 1, 0, -0.709411, 0, 0.704795, 17.9635, 1.01944, 1.81835)
+
+[node name="ScnScooter2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("48_mafg4")]
+transform = Transform3D(0.511653, 0, -0.859192, 0, 1, 0, 0.859192, 0, 0.511653, 36.1614, 1.01944, 1.63257)
+
+[node name="ScnScooter3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("48_mafg4")]
+transform = Transform3D(0.786429, 0, 0.617681, 0, 1, 0, -0.617681, 0, 0.786429, -53.7218, 1.01944, 1.78759)
+
+[node name="ScnTrashcanbin" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("49_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4152, 1.02461, 1.51842)
+
+[node name="ScnTrashcanlid" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("50_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.4152, 1.02461, 1.51842)
+
+[node name="ScnTrashcanbin2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("49_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.1586, 1.02461, 2.16889)
+
+[node name="ScnTrashcanlid2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("50_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 0.656336, 0.754469, 0, -0.754469, 0.656336, -42.1423, 0.541836, 2.39915)
+
+[node name="ScnTrashcanbin3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("49_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.4817, 1.04841, -2.06588)
+
+[node name="ScnTrashcanlid3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("50_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.4817, 1.04841, -2.06588)
+
+[node name="ScnTrashcanbin4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("49_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3276, 1.02461, 1.15401)
+
+[node name="ScnTrashcanlid4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("50_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3276, 1.02461, 1.15401)
+
+[node name="ScnDumpster" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("51_6unf6")]
+transform = Transform3D(-0.0509067, 0, -0.998703, 0, 1, 0, 0.998703, 0, -0.0509067, 15.8709, 1, 7.63159)
+
+[node name="ScnDumpsterlid1" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("52_tgq23")]
+transform = Transform3D(-0.0509067, 0, -0.998703, 0, 1, 0, 0.998703, 0, -0.0509067, 15.8709, 1, 7.63159)
+
+[node name="ScnDumpster2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("51_6unf6")]
+transform = Transform3D(-0.961112, 0, 0.276157, 0, 1, 0, -0.276157, 0, -0.961112, -10.6352, 1, 1.90217)
+
+[node name="ScnDumpsterlid2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("53_g7xeu")]
+transform = Transform3D(-0.961112, 0, 0.276157, 0, 1, 0, -0.276157, 0, -0.961112, -10.6352, 1, 1.90217)
+
+[node name="ScnTrashcanbin5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("49_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5466, 1.02461, 4.11752)
+
+[node name="ScnTrashcanlid5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("50_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.5466, 1.02461, 4.11752)
+
+[node name="ScnTrashcanbin6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("49_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.3901, 1.02461, 6.01312)
+
+[node name="ScnTrashcanlid6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("50_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.3901, 1.02461, 6.01312)
+
+[node name="ScnStonewall" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("54_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 0.975656, -17.0145)
+
+[node name="ScnStonewall6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("54_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 1, -17)
+
+[node name="ScnStonewall3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("54_klj1x")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -29, 1, -19)
+
+[node name="ScnStonewall2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("54_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0.975656, -17.0145)
+
+[node name="ScnStonewall5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("54_klj1x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 1, -17)
+
+[node name="ScnStonewall4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("54_klj1x")]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -25, 1, -19)
+
+[node name="ScnConcretebricks" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 2, -19)
+
+[node name="ScnConcretebricks6" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, 2, -23)
+
+[node name="ScnConcretebricks7" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 2, -19)
+
+[node name="ScnConcretebricks8" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 2, -23)
+
+[node name="ScnConcretebricks2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 2, -19)
+
+[node name="ScnConcretebricks3" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 2, -19)
+
+[node name="ScnConcretebricks4" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 2, -23)
+
+[node name="ScnConcretebricks9" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 2, -23)
+
+[node name="ScnConcretebricks5" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("3_y3x56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 2, -23)
+
+[node name="ScnCobblestonestairs" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("55_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.4, -28, 1, -19.2493)
+
+[node name="ScnCobblestonestairs2" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("55_c4ti3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.4, -26, 1, -19.2493)
+
+[node name="ScnDirtplot9" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 2, -21)
+
+[node name="ScnDirtplot10" parent="WorldItems/Group3_CityDeco1" instance=ExtResource("36_6tgfh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 2, -21)
+
 [node name="PostProcessing" parent="." instance=ExtResource("3_286st")]
+
+[node name="ScnCar" parent="." instance=ExtResource("56_c4ti3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0.5, -8.56615)
+
+[node name="ScnBase1" parent="." instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -20)
+
+[node name="ScnBase2" parent="." instance=ExtResource("8_3wkli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -20)
+
+[node name="ScnBase3" parent="." instance=ExtResource("14_5fklp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -20)
+
+[node name="ScnBase4" parent="." instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -20)
+
+[node name="ScnBase5" parent="." instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -22)
+
+[node name="ScnBase6" parent="." instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -22)
+
+[node name="ScnBase7" parent="." instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -20)
+
+[node name="ScnBase8" parent="." instance=ExtResource("14_5fklp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, -20)
+
+[node name="ScnBase9" parent="." instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, -20)
+
+[node name="ScnBase10" parent="." instance=ExtResource("16_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, -26)
+
+[node name="ScnBase11" parent="." instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1, -20)
+
+[node name="ScnBase12" parent="." instance=ExtResource("16_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 1, -20)
+
+[node name="ScnBase13" parent="." instance=ExtResource("8_3wkli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 1, -20)
+
+[node name="ScnStorefront1" parent="." instance=ExtResource("23_jpldl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -46, 1, -20)
+
+[node name="ScnStorefront2" parent="." instance=ExtResource("24_7ochp")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -40, 1, -20)
+
+[node name="ScnStorefront3" parent="." instance=ExtResource("26_wjydf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -52, 1, -20)
+
+[node name="ScnStorefront4" parent="." instance=ExtResource("28_8cs8j")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -14, 1, -20)
+
+[node name="ScnStorefront5" parent="." instance=ExtResource("27_8r2kf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2, 1, -20)
+
+[node name="ScnStorefront6" parent="." instance=ExtResource("24_7ochp")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, 1, -20)
+
+[node name="ScnStorefront7" parent="." instance=ExtResource("25_6aiv5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 1, -20)
+
+[node name="ScnStorefront8" parent="." instance=ExtResource("26_wjydf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10, 1, -22)
+
+[node name="ScnStorefront9" parent="." instance=ExtResource("24_7ochp")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16, 1, -22)
+
+[node name="ScnStorefront10" parent="." instance=ExtResource("23_jpldl")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22, 1, -20)
+
+[node name="ScnStorefront11" parent="." instance=ExtResource("25_6aiv5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32, 1, -20)
+
+[node name="ScnStorefront12" parent="." instance=ExtResource("26_wjydf")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 38, 1, -20)
+
+[node name="ScnTrim1" parent="." instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, -20)
+
+[node name="ScnTrim2" parent="." instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 1, -20)
+
+[node name="ScnTrim3" parent="." instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 1, -20)
+
+[node name="ScnTrim4" parent="." instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1, -22)
+
+[node name="ScnTrim22" parent="." instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -22)
+
+[node name="ScnTrim5" parent="." instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -22)
+
+[node name="ScnTrim6" parent="." instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -20)
+
+[node name="ScnTrim7" parent="." instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -20)
+
+[node name="ScnTrim8" parent="." instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, -20)
+
+[node name="ScnTrim9" parent="." instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -20)
+
+[node name="ScnTrim10" parent="." instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 1, -20)
+
+[node name="ScnTrim11" parent="." instance=ExtResource("19_wjydf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, 1, -20)
+
+[node name="ScnTrim12" parent="." instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 1, -20)
+
+[node name="ScnBase14" parent="." instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, -20)
+
+[node name="ScnBase15" parent="." instance=ExtResource("8_3wkli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -20)
+
+[node name="ScnBase16" parent="." instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, -20)
+
+[node name="ScnBase17" parent="." instance=ExtResource("9_jsskw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, -22)
+
+[node name="ScnBase18" parent="." instance=ExtResource("7_8mwr5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, -22)
+
+[node name="ScnBase19" parent="." instance=ExtResource("10_sdsxl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 4, -20)
+
+[node name="ScnBase20" parent="." instance=ExtResource("14_5fklp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 4, -20)
+
+[node name="ScnBase21" parent="." instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 4, -20)
+
+[node name="ScnBase22" parent="." instance=ExtResource("16_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 4, -26)
+
+[node name="ScnBase23" parent="." instance=ExtResource("11_oqb7r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 4, -20)
+
+[node name="ScnBase24" parent="." instance=ExtResource("16_jpldl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 4, -20)
+
+[node name="ScnTrim13" parent="." instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 4, -20)
+
+[node name="ScnTrim14" parent="." instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 4, -20)
+
+[node name="ScnTrim15" parent="." instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 4, -20)
+
+[node name="ScnTrim16" parent="." instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 4, -22)
+
+[node name="ScnTrim17" parent="." instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, -20)
+
+[node name="ScnTrim18" parent="." instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -20)
+
+[node name="ScnTrim19" parent="." instance=ExtResource("18_6aiv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 4, -20)
+
+[node name="ScnTrim20" parent="." instance=ExtResource("20_8r2kf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -20)
+
+[node name="ScnTrim21" parent="." instance=ExtResource("21_8cs8j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 4, -20)
+
+[node name="ScnTrim23" parent="." instance=ExtResource("17_7ochp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, 4, -20)
