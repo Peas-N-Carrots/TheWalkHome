@@ -6,7 +6,10 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qdvbr"]
 shader = ExtResource("1_qdvbr")
 shader_parameter/AFTERIMAGE_BLEND = 0.0
-shader_parameter/STRENGTH = 1.0
+shader_parameter/CHROMA_STRENGTH = 1.0
+shader_parameter/NAUSIA_STRENGTH = 1.0
+shader_parameter/AFTERIMAGE_STRENGTH = 1.0
+shader_parameter/VIGNETTE_STRENGTH = 1.0
 
 [node name="PostProcessing" type="CanvasLayer"]
 

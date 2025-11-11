@@ -11,13 +11,21 @@ const COYOTE_TIME = 0.5
 const TRIP_VEL_THRESH = 0.7
 const FALL_VEL_THRESH = 10.0
 
+const TOTAL_TRIP_TIME = 20
 const MAX_WOBBLE = 0.005
 
 @onready var camera : Camera3D = $Camera3D
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var trip_level : float = 1.0
+var trip_level : float = 0.0
+@export var wobble_curve : Curve
+@export var chroma_curve : Curve
+@export var nausia_curve : Curve
+@export var afterimage_curve : Curve
+@export var vignette_curve : Curve
+@onready var shader = get_tree().root.find_child("ColorRect", true, false);
+
 var time := 1.0
 
 var input_dir := Vector2.ZERO
@@ -47,6 +55,9 @@ func _input(event):
 
 func _physics_process(delta):
 	time += delta
+	
+	update_trip_level()
+	
 	get_input()
 	
 	if !tripped:
@@ -63,6 +74,17 @@ func _physics_process(delta):
 		check_trip(p_vel)
 		check_fall(p_vel)
 
+func update_trip_level() -> void:
+	if (calc_trip_level(time) - trip_level > 0.01 || (calc_trip_level(time) == 1.0 && trip_level != 1.0)):
+		set_trip_level(calc_trip_level(time))
+
+func calc_trip_level(t: float) -> float:
+	return clamp(t / TOTAL_TRIP_TIME, 0.0, 1.0)
+
+func set_trip_level(level: float) -> void:
+	trip_level = level
+	shader.update(chroma_curve.sample(trip_level), nausia_curve.sample(trip_level), afterimage_curve.sample(trip_level), vignette_curve.sample(trip_level))
+
 func get_jump_frame() -> bool:
 	return time - jump_frame < JUMP_BUFFER
 
@@ -70,7 +92,7 @@ func get_ground_frame() -> bool:
 	return time - ground_frame < COYOTE_TIME
 
 func wobble_cam() -> void:
-	var offset = Vector2(sin(time * 1.53 + 4.8), sin(time * 2.8)) * MAX_WOBBLE * trip_level
+	var offset = Vector2(sin(time * 1.53 + 4.8), sin(time * 2.8)) * MAX_WOBBLE * wobble_curve.sample(trip_level)
 	rotate_y(offset.y)
 	camera.rotate_x(offset.x)
 	camera.rotation.x = clamp(camera.rotation.x, -PI/2, PI/2)

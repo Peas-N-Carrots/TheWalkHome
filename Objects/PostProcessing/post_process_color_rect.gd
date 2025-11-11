@@ -32,3 +32,9 @@ func _process(delta: float) -> void:
 	else:
 		blend = clamp(capture_timer/capture_interval, 0.0, 1.0)
 		material.set_shader_parameter("AFTERIMAGE_BLEND", blend)
+
+func update(chroma: float, nausia: float, afterimage: float, vignette: float) -> void:
+	material.set_shader_parameter("CHROMA_STRENGTH", chroma)
+	material.set_shader_parameter("NAUSIA_STRENGTH", nausia)
+	material.set_shader_parameter("AFTERIMAGE_STRENGTH", afterimage)
+	material.set_shader_parameter("VIGNETTE_STRENGTH", vignette)

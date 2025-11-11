@@ -1,19 +1,40 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtl88uyktabio"]
+[gd_scene load_steps=10 format=3 uid="uid://dtl88uyktabio"]
 
 [ext_resource type="Script" uid="uid://csqohn7devma4" path="res://Objects/Player/player.gd" id="1_xhfnw"]
+
+[sub_resource type="Curve" id="Curve_we6tp"]
+_data = [Vector2(0.228723, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_oansn"]
+_data = [Vector2(0.143617, 0), 0.0, 0.0, 0, 0, Vector2(0.68617, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_cac6a"]
+_data = [Vector2(0.106383, 0), 0.0, 0.0, 0, 0, Vector2(0.776596, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_b0me6"]
+_data = [Vector2(0.244681, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0rwas"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kpjcp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xhfnw"]
-size = Vector3(0.503082, 0.221786, 0.64209)
+size = Vector3(0.503082, 0.390567, 0.569031)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kpjcp"]
-size = Vector3(0.478287, 1.16105, 0.734833)
+size = Vector3(0.478287, 0.736506, 0.61978)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+collision_layer = 0
 script = ExtResource("1_xhfnw")
+wobble_curve = SubResource("Curve_we6tp")
+chroma_curve = SubResource("Curve_oansn")
+nausia_curve = SubResource("Curve_cac6a")
+afterimage_curve = SubResource("Curve_b0me6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_0rwas")
@@ -29,17 +50,17 @@ mesh = SubResource("CapsuleMesh_kpjcp")
 [node name="FootArea" type="Area3D" parent="TripCheck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.638319, -0.500221)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TripCheck/FootArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00267029, 0.152351, 0.178955)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00267029, 0.0679604, 0.215485)
 shape = SubResource("BoxShape3D_xhfnw")
 
 [node name="BodyArea" type="Area3D" parent="TripCheck"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.417362, -0.500221)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TripCheck/BodyArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000282288, 0.809092, 0.132584)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000282288, 0.851707, 0.179441)
 shape = SubResource("BoxShape3D_kpjcp")
