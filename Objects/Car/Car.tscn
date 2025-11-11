@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://lx4wxaqy53u"]
+
+[ext_resource type="PackedScene" uid="uid://o72603tyy2g7" path="res://Assets/Objects/Vehicles/scn_car.tscn" id="1_d3qn3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7jeou"]
+size = Vector3(1.7592, 1.39014, 4.29767)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3qn3"]
+size = Vector3(1.68793, 1.31067, 4.17578)
+
+[node name="Car" type="CharacterBody3D"]
+collision_mask = 4
+
+[node name="ScnCar" parent="." instance=ExtResource("1_d3qn3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00219846, 0.0175911, -0.00856134)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00158405, 0.68752, -0.00875854)
+shape = SubResource("BoxShape3D_7jeou")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00424194, 0.649028, -0.00976563)
+shape = SubResource("BoxShape3D_d3qn3")

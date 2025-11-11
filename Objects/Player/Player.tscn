@@ -29,7 +29,7 @@ size = Vector3(0.503082, 0.390567, 0.569031)
 size = Vector3(0.478287, 0.907315, 0.61978)
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-collision_layer = 0
+collision_layer = 8
 script = ExtResource("1_xhfnw")
 wobble_curve = SubResource("Curve_we6tp")
 chroma_curve = SubResource("Curve_oansn")
