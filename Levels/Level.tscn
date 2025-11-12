@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://dh5nb22s4p2lj"]
+[gd_scene load_steps=94 format=3 uid="uid://dh5nb22s4p2lj"]
 
 [ext_resource type="Script" uid="uid://dsxx1n5hskcnr" path="res://Levels/level.gd" id="1_24c1m"]
 [ext_resource type="PackedScene" uid="uid://dtl88uyktabio" path="res://Objects/Player/Player.tscn" id="2_wbw1h"]
@@ -101,9 +101,33 @@ volumetric_fog_emission_energy = 0.5
 _data = [Vector2(0, 0.539326), 0.0, 0.0, 0, 0, Vector2(0.765957, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_63ltd"]
+noise_type = 3
+frequency = 0.2001
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bds27"]
+noise = SubResource("FastNoiseLite_63ltd")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fl6db"]
+noise_type = 3
+frequency = 0.1791
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f1ogo"]
+noise = SubResource("FastNoiseLite_fl6db")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bds27"]
 render_priority = 0
 shader = ExtResource("3_63ltd")
+shader_parameter/noise_texture1 = SubResource("NoiseTexture2D_bds27")
+shader_parameter/noise_texture2 = SubResource("NoiseTexture2D_f1ogo")
+shader_parameter/water_color = Color(0.77, 0.66836, 0.2156, 1)
+shader_parameter/water_color_deep = Color(0.35, 0.333667, 0.21, 1)
+shader_parameter/scroll_speed1 = Vector2(-0.002, 0.004)
+shader_parameter/scroll_speed2 = Vector2(-0.009, 0.002)
+shader_parameter/wave_strength = 0.8
+shader_parameter/noise_scale = 1.0
+shader_parameter/metallic = 0.215
+shader_parameter/roughness = 0.209
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bexhn"]
 material = SubResource("ShaderMaterial_bds27")
