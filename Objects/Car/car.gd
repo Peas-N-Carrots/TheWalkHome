@@ -4,6 +4,9 @@ const CAR_SPEED = 14.5
 
 var vel: Vector3 = Vector3.ZERO
 
+func _ready() -> void:
+	$AudioDrive.play()
+
 func _process(delta: float) -> void:
 	global_position += vel * delta
 

@@ -14,6 +14,8 @@ const FALL_VEL_THRESH = 10.0
 const TOTAL_TRIP_TIME = 20
 const MAX_WOBBLE = 0.005
 
+const FOOTSTEP_TIME = 0.4
+
 @onready var camera : Camera3D = $Camera3D
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -29,6 +31,8 @@ var trip_level : float = 0.0
 var time := 1.0
 
 var input_dir := Vector2.ZERO
+
+var walk_time := 0.0
 
 var ground_frame := -100.0
 var jump_frame := -100.0
@@ -67,6 +71,8 @@ func _physics_process(delta):
 	get_input()
 	
 	if !tripped:
+		footstep_audio(delta)
+		
 		wobble_cam()
 		
 		apply_gravity(delta)
@@ -79,6 +85,15 @@ func _physics_process(delta):
 		
 		check_trip(p_vel)
 		check_fall(p_vel)
+
+func footstep_audio(delta: float) -> void:
+	if input_dir && is_on_floor():
+		if walk_time >= FOOTSTEP_TIME:
+			walk_time = 0.0
+			$AudioFootstep.play()
+		walk_time += delta
+	else:
+		walk_time = FOOTSTEP_TIME/2
 
 func update_trip_level() -> void:
 	if (calc_trip_level(time) - trip_level > 0.01 || (calc_trip_level(time) == 1.0 && trip_level != 1.0)):

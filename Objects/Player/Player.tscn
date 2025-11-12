@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dtl88uyktabio"]
+[gd_scene load_steps=23 format=3 uid="uid://dtl88uyktabio"]
 
 [ext_resource type="Script" uid="uid://csqohn7devma4" path="res://Objects/Player/player.gd" id="1_xhfnw"]
 [ext_resource type="ArrayMesh" uid="uid://wcmtik8cmkd1" path="res://Objects/Player/sm_guy.obj" id="2_oansn"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d333cu2ljttxj" path="res://Assets/Textures/tex_pants.png" id="5_7t0p5"]
 [ext_resource type="Texture2D" uid="uid://b0lkc2y28a1o6" path="res://Assets/Textures/tex_boots.png" id="6_ebgc0"]
 [ext_resource type="Texture2D" uid="uid://tdhupnuwmk2e" path="res://Assets/Textures/tex_rubber.png" id="7_1ggq4"]
+[ext_resource type="AudioStream" uid="uid://cmwhgqn7d4j73" path="res://SFX/st3-footstep-sfx-323056.mp3" id="8_7t0p5"]
+[ext_resource type="AudioStream" uid="uid://c4kra8ku2fu0a" path="res://SFX/powerful-ground-impact-355967.mp3" id="9_ebgc0"]
 
 [sub_resource type="Curve" id="Curve_we6tp"]
 _data = [Vector2(0.228723, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -101,3 +103,10 @@ surface_material_override/1 = SubResource("StandardMaterial3D_ufaat")
 surface_material_override/2 = SubResource("StandardMaterial3D_8ngx6")
 surface_material_override/3 = SubResource("StandardMaterial3D_b2dcs")
 surface_material_override/4 = SubResource("StandardMaterial3D_0elat")
+
+[node name="AudioFootstep" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_7t0p5")
+volume_db = -5.0
+
+[node name="AudioFall" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("9_ebgc0")
