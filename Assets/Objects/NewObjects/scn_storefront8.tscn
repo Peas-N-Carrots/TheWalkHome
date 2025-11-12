@@ -1,0 +1,30 @@
+[gd_scene load_steps=9 format=3 uid="uid://dsgcf1cffg15f"]
+
+[ext_resource type="ArrayMesh" uid="uid://2tpxphcgrixo" path="res://Assets/Meshes/NewObjects/Storefront8.obj" id="1_t8akm"]
+[ext_resource type="Material" uid="uid://dhqv8gucspdsu" path="res://Assets/Materials/mat_blackmetal.tres" id="2_tht88"]
+[ext_resource type="Material" uid="uid://bxgqanjulpomk" path="res://Assets/Materials/mat_door.tres" id="3_lkgwy"]
+[ext_resource type="Material" uid="uid://cm4tk342jko46" path="res://Assets/Materials/mat_windows.tres" id="4_gcetx"]
+[ext_resource type="Material" uid="uid://bekvefcy4kqg5" path="res://Assets/Materials/mat_concretebricks.tres" id="5_sc1gp"]
+[ext_resource type="Material" uid="uid://dpkhw7jsopqe6" path="res://Assets/Materials/mat_rock.tres" id="6_kom1d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wdkc"]
+emission_enabled = true
+emission = Color(0.770021, 8.01858e-05, 0.622872, 1)
+emission_energy_multiplier = 8.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8akm"]
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 8.0
+
+[node name="ScnStorefront8" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_t8akm")
+surface_material_override/0 = ExtResource("2_tht88")
+surface_material_override/1 = ExtResource("3_lkgwy")
+surface_material_override/2 = ExtResource("4_gcetx")
+surface_material_override/3 = ExtResource("5_sc1gp")
+surface_material_override/4 = SubResource("StandardMaterial3D_0wdkc")
+surface_material_override/5 = SubResource("StandardMaterial3D_t8akm")
+surface_material_override/6 = ExtResource("6_kom1d")
