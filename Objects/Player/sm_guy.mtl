@@ -1,0 +1,52 @@
+# Blender 4.5.4 LTS MTL File: 'Illusion (1) (1).blend'
+# www.blender.org
+
+newmtl Boots
+Ns 399.194214
+Ka 0.040909 0.040909 0.040909
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd tex_boots.png
+
+newmtl Metal
+Ns 0.000000
+Ka 0.109091 0.109091 0.109091
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd tex_rubber.png
+
+newmtl Pants
+Ns 64.793388
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd tex_pants.png
+
+newmtl Shirt
+Ns 25.309908
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd tex_shirt.png
+
+newmtl Skin
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd tex_skin.png

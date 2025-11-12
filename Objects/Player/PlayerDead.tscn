@@ -1,8 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://c13pcti372ql8"]
+[gd_scene load_steps=14 format=3 uid="uid://c13pcti372ql8"]
+
+[ext_resource type="ArrayMesh" uid="uid://wcmtik8cmkd1" path="res://Objects/Player/sm_guy.obj" id="1_i50ac"]
+[ext_resource type="Texture2D" uid="uid://ddjcvqrkmlwre" path="res://Assets/Textures/tex_skin.png" id="2_g5a7a"]
+[ext_resource type="Texture2D" uid="uid://6bxxbine23ju" path="res://Assets/Textures/tex_shirt.png" id="3_3gyjc"]
+[ext_resource type="Texture2D" uid="uid://d333cu2ljttxj" path="res://Assets/Textures/tex_pants.png" id="4_jg8hi"]
+[ext_resource type="Texture2D" uid="uid://b0lkc2y28a1o6" path="res://Assets/Textures/tex_boots.png" id="5_ybd67"]
+[ext_resource type="Texture2D" uid="uid://tdhupnuwmk2e" path="res://Assets/Textures/tex_rubber.png" id="6_g04el"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nadv7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_s8xrb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdb1s"]
+albedo_texture = ExtResource("2_g5a7a")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mronl"]
+albedo_texture = ExtResource("3_3gyjc")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdx3v"]
+albedo_texture = ExtResource("4_jg8hi")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndkw3"]
+albedo_texture = ExtResource("5_ybd67")
+texture_filter = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n3se1"]
+albedo_texture = ExtResource("6_g04el")
+texture_filter = 0
 
 [node name="PlayerDead" type="RigidBody3D"]
 collision_layer = 0
@@ -11,4 +38,15 @@ collision_layer = 0
 shape = SubResource("CapsuleShape3D_nadv7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_s8xrb")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -1.02176, 0)
+mesh = ExtResource("1_i50ac")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_kdb1s")
+surface_material_override/1 = SubResource("StandardMaterial3D_mronl")
+surface_material_override/2 = SubResource("StandardMaterial3D_hdx3v")
+surface_material_override/3 = SubResource("StandardMaterial3D_ndkw3")
+surface_material_override/4 = SubResource("StandardMaterial3D_n3se1")
