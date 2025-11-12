@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dx4ti7df7a236"]
+
+[ext_resource type="Texture2D" uid="uid://cpmti2va7u5xu" path="res://Assets/Textures/tex_forestfloor.png" id="1_a2k4d"]
+
+[resource]
+albedo_texture = ExtResource("1_a2k4d")
+texture_filter = 2
