@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cltigjtqn3b8"]
+
+[ext_resource type="Script" uid="uid://dwlaevv16v3d6" path="res://Objects/Win/win_area.gd" id="1_m761s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x76bg"]
+size = Vector3(5.75104, 4.30261, 10.0992)
+
+[node name="WinArea" type="Area3D"]
+script = ExtResource("1_m761s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11972, 1.65131, -0.318024)
+shape = SubResource("BoxShape3D_x76bg")

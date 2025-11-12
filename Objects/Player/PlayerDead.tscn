@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://c13pcti372ql8"]
+[gd_scene load_steps=16 format=3 uid="uid://c13pcti372ql8"]
 
+[ext_resource type="Script" uid="uid://t8labba0l8er" path="res://Objects/Player/player_dead.gd" id="1_3gyjc"]
 [ext_resource type="ArrayMesh" uid="uid://wcmtik8cmkd1" path="res://Objects/Player/sm_guy.obj" id="1_i50ac"]
 [ext_resource type="Texture2D" uid="uid://ddjcvqrkmlwre" path="res://Assets/Textures/tex_skin.png" id="2_g5a7a"]
 [ext_resource type="Texture2D" uid="uid://6bxxbine23ju" path="res://Assets/Textures/tex_shirt.png" id="3_3gyjc"]
 [ext_resource type="Texture2D" uid="uid://d333cu2ljttxj" path="res://Assets/Textures/tex_pants.png" id="4_jg8hi"]
 [ext_resource type="Texture2D" uid="uid://b0lkc2y28a1o6" path="res://Assets/Textures/tex_boots.png" id="5_ybd67"]
 [ext_resource type="Texture2D" uid="uid://tdhupnuwmk2e" path="res://Assets/Textures/tex_rubber.png" id="6_g04el"]
+[ext_resource type="AudioStream" uid="uid://cmwhgqn7d4j73" path="res://SFX/st3-footstep-sfx-323056.mp3" id="8_jg8hi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nadv7"]
 
@@ -33,6 +35,7 @@ texture_filter = 0
 
 [node name="PlayerDead" type="RigidBody3D"]
 collision_layer = 0
+script = ExtResource("1_3gyjc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_nadv7")
@@ -50,3 +53,6 @@ surface_material_override/1 = SubResource("StandardMaterial3D_mronl")
 surface_material_override/2 = SubResource("StandardMaterial3D_hdx3v")
 surface_material_override/3 = SubResource("StandardMaterial3D_ndkw3")
 surface_material_override/4 = SubResource("StandardMaterial3D_n3se1")
+
+[node name="AudioImpact" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_jg8hi")
