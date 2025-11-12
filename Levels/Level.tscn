@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://dh5nb22s4p2lj"]
+[gd_scene load_steps=72 format=3 uid="uid://dh5nb22s4p2lj"]
 
 [ext_resource type="Script" uid="uid://dsxx1n5hskcnr" path="res://Levels/level.gd" id="1_24c1m"]
 [ext_resource type="PackedScene" uid="uid://dtl88uyktabio" path="res://Objects/Player/Player.tscn" id="2_wbw1h"]
@@ -57,7 +57,6 @@
 [ext_resource type="PackedScene" uid="uid://dn27w4dx130v2" path="res://Assets/Objects/Trash/scn_dumpsterlid3.tscn" id="53_g7xeu"]
 [ext_resource type="PackedScene" uid="uid://doxvsh2rwoq8o" path="res://Assets/Objects/Fences/scn_stonewall.tscn" id="54_klj1x"]
 [ext_resource type="PackedScene" uid="uid://bpj6xacax5icl" path="res://Assets/Objects/CityObjects/scn_cobblestonestairs.tscn" id="55_c4ti3"]
-[ext_resource type="PackedScene" uid="uid://o72603tyy2g7" path="res://Assets/Objects/Vehicles/scn_car.tscn" id="56_c4ti3"]
 [ext_resource type="PackedScene" uid="uid://dsgcf1cffg15f" path="res://Assets/Objects/NewObjects/scn_storefront8.tscn" id="57_6unf6"]
 [ext_resource type="PackedScene" uid="uid://c8s8gd3pb3dny" path="res://Assets/Objects/NewObjects/scn_tollbooth.tscn" id="59_3i2c5"]
 [ext_resource type="PackedScene" uid="uid://dssawwaix0yre" path="res://Assets/Objects/NewObjects/scn_tunnel.tscn" id="59_g7xeu"]
@@ -2100,7 +2099,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 2.46324, -33)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 2.46324, -21)
 
 [node name="CarSpawner" parent="WorldItems" instance=ExtResource("59_r5ua0")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -76.3822, 1.14, -5.05346)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -76.3822, 0.489137, -5.05346)
 
 [node name="CarDestroyer" parent="WorldItems" instance=ExtResource("60_mrklp")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -76.6659, 0.5, -10.1722)
@@ -2109,12 +2108,9 @@ transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -76.6659, 0.5, -10.1722)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 57.9341, 0.5, -3.43911)
 
 [node name="CarSpawner2" parent="WorldItems" instance=ExtResource("59_r5ua0")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 57.0742, 1.14, -8.70707)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 57.0742, 0.489137, -8.70707)
 
 [node name="PostProcessing" parent="." instance=ExtResource("3_286st")]
-
-[node name="ScnCar" parent="." instance=ExtResource("56_c4ti3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0.5, -8.56615)
 
 [node name="ScnStorefront8" parent="." instance=ExtResource("57_6unf6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 6)

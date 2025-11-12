@@ -1,10 +1,10 @@
 extends Node3D
 
 const MAX_COOLDOWN = 11.0
-const MIN_COOLDOWN = 5.0
+const MIN_COOLDOWN = 2.0
 const QUICK_COOLDOWN = 0.7
 
-const QUICK_COOLDOWN_CHANCE = 0.2
+const QUICK_COOLDOWN_CHANCE = 0.1
 
 var cooldown : float
 
