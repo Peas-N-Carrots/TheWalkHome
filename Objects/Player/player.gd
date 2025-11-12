@@ -56,6 +56,8 @@ func _ready():
 	body_area.body_exited.connect(_on_body_area_exit)
 	
 	update_trip_level()
+	
+	$AudioAbience.play()
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -174,6 +176,7 @@ func die(p_vel : Vector3 = Vector3.ZERO) -> void:
 			tween.tween_property(camera, "position", Vector3(0, 1.5, 2), 1.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 			spawn_ragdoll(p_vel)
 			visible = false
+			$AudioFall.play()
 			level.player_die()
 
 func spawn_ragdoll(p_vel: Vector3 = Vector3.ZERO) -> void:
