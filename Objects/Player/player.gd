@@ -46,6 +46,8 @@ func _ready():
 	foot_area.body_exited.connect(_on_foot_area_exit)
 	body_area.body_entered.connect(_on_body_area_enter)
 	body_area.body_exited.connect(_on_body_area_exit)
+	
+	update_trip_level()
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -56,7 +58,7 @@ func _input(event):
 func _physics_process(delta):
 	time += delta
 	
-	update_trip_level()
+	#update_trip_level()
 	
 	get_input()
 	

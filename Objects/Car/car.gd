@@ -12,3 +12,7 @@ func set_speed() -> void:
 
 func destroy_car() -> void:
 	queue_free()
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.has_method("die"):
+		body.die()

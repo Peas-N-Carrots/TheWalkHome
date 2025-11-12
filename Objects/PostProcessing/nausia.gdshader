@@ -4,10 +4,10 @@ uniform sampler2D SCREEN_TEXTURE: hint_screen_texture, filter_linear_mipmap;
 uniform sampler2D AFTERIMAGE_TEXTURE;
 uniform float AFTERIMAGE_BLEND;
 
-uniform float CHROMA_STRENGTH: hint_range(0.0, 1.0) = 1.0;
-uniform float NAUSIA_STRENGTH: hint_range(0.0, 1.0) = 1.0;
-uniform float AFTERIMAGE_STRENGTH: hint_range(0.0, 1.0) = 1.0;
-uniform float VIGNETTE_STRENGTH: hint_range(0.0, 1.0) = 1.0;
+uniform float CHROMA_STRENGTH: hint_range(0.0, 1.0) = 0.0;
+uniform float NAUSIA_STRENGTH: hint_range(0.0, 1.0) = 0.0;
+uniform float AFTERIMAGE_STRENGTH: hint_range(0.0, 1.0) = 0.0;
+uniform float VIGNETTE_STRENGTH: hint_range(0.0, 1.0) = 0.0;
 
 const float VIGNETTE_INTENSITY = 0.6;
 const float VIGNETTE_SOFTNESS = 0.1;
