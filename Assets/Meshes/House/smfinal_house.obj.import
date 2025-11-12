@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8qw2xk4oemo1"
+path="res://.godot/imported/smfinal_house.obj-69f1e75995a0b0c0caa08342f94e987a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/smfinal_house.obj-69f1e75995a0b0c0caa08342f94e987a.mesh"]
+
+source_file="res://Assets/Meshes/House/smfinal_house.obj"
+dest_files=["res://.godot/imported/smfinal_house.obj-69f1e75995a0b0c0caa08342f94e987a.mesh", "res://.godot/imported/smfinal_house.obj-69f1e75995a0b0c0caa08342f94e987a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
