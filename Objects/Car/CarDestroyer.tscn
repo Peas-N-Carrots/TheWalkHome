@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://itrxnlsvv8v7"]
+
+[ext_resource type="Script" uid="uid://bwcid2y30h2so" path="res://Objects/Car/car_destroyer.gd" id="1_802sr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfirn"]
+size = Vector3(5.98975, 5.00598, 1)
+
+[node name="CarDestroyer" type="Area3D"]
+script = ExtResource("1_802sr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00439453, 2.50433, 0)
+shape = SubResource("BoxShape3D_kfirn")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

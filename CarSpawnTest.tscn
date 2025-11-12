@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://cc5a5p1v6heye"]
+
+[ext_resource type="PackedScene" uid="uid://c1whlqwqk2kq3" path="res://Objects/Car/CarSpawner.tscn" id="1_84xvg"]
+[ext_resource type="PackedScene" uid="uid://itrxnlsvv8v7" path="res://Objects/Car/CarDestroyer.tscn" id="2_nb7b5"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_84xvg"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_nb7b5"]
+sky_material = SubResource("ProceduralSkyMaterial_84xvg")
+
+[sub_resource type="Environment" id="Environment_ua3li"]
+background_mode = 2
+sky = SubResource("Sky_nb7b5")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="CarSpawnTest" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ua3li")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldItems" type="Node" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="WorldItems"]
+transform = Transform3D(0.657148, -0.332869, 0.67628, 0.00213012, 0.898023, 0.439943, -0.753758, -0.287667, 0.590844, 8.02839, 2.55774, 7.88869)
+current = true
+fov = 88.1911
+
+[node name="CarSpawner" parent="WorldItems" instance=ExtResource("1_84xvg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.37141, 0, 0)
+
+[node name="CarSpawner2" parent="WorldItems" instance=ExtResource("1_84xvg")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.65484, 0, -1.89087)
+
+[node name="CarDestroyer" parent="WorldItems" instance=ExtResource("2_nb7b5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.38905, 0, 7.59698)
+
+[node name="CarDestroyer2" parent="WorldItems" instance=ExtResource("2_nb7b5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.92352, 0, 0.209755)

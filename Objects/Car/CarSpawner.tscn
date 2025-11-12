@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1whlqwqk2kq3"]
+
+[ext_resource type="Script" uid="uid://bhs0vnfa1meva" path="res://car_spawner.gd" id="1_yko0j"]
+[ext_resource type="Texture2D" uid="uid://beifelkvsojfr" path="res://icon.svg" id="2_wb5d2"]
+
+[node name="CarSpawner" type="Node3D"]
+script = ExtResource("1_yko0j")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("2_wb5d2")
