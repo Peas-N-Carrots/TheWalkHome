@@ -1,6 +1,6 @@
 extends Area3D
 
-const CAR_SPEED = 13.8
+const CAR_SPEED = 14.5
 
 var vel: Vector3 = Vector3.ZERO
 

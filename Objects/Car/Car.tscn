@@ -10,6 +10,7 @@ size = Vector3(1.7592, 1.39014, 4.29767)
 size = Vector3(1.68793, 1.31067, 4.17578)
 
 [node name="Car" type="Area3D"]
+collision_mask = 2
 script = ExtResource("1_7jeou")
 
 [node name="ScnCar" parent="." instance=ExtResource("1_d3qn3")]

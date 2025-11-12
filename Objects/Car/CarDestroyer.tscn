@@ -6,6 +6,8 @@
 size = Vector3(5.98975, 5.00598, 1)
 
 [node name="CarDestroyer" type="Area3D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_802sr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
