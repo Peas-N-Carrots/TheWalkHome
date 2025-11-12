@@ -40,6 +40,10 @@ var foot_col := false
 var body_col := false
 var tripped := false
 
+@onready var ragdoll : PackedScene = preload("res://Objects/Player/PlayerDead.tscn")
+@onready var spawn_point = get_tree().root.find_child("WorldItems", true, false);
+@onready var level = get_tree().root.find_child("Node3D", true, false);
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	foot_area.body_entered.connect(_on_foot_area_enter)
@@ -146,10 +150,25 @@ func check_trip(p_vel: Vector3) -> void:
 	if (foot_col && !body_col && is_on_wall() &&
 	(Vector2(p_vel.x, p_vel.z).length() / RUN_SPEED) - (Vector2(velocity.x, velocity.z).length() / RUN_SPEED)
 	> TRIP_VEL_THRESH):
-		die()
+		die(p_vel)
 
-func die() -> void:
+func die(p_vel : Vector3 = Vector3.ZERO) -> void:
 		if !tripped:
 			tripped = true
 			var tween = create_tween()
 			tween.tween_property(camera, "position", Vector3(0, 1.5, 2), 1.0).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+			spawn_ragdoll(p_vel)
+			visible = false
+			level.player_die()
+
+func spawn_ragdoll(p_vel: Vector3 = Vector3.ZERO) -> void:
+	var new_ragdoll = ragdoll.instantiate()
+	spawn_point.add_child(new_ragdoll)
+	new_ragdoll.global_transform = self.global_transform
+	
+	if p_vel != Vector3.ZERO:
+		new_ragdoll.linear_velocity = p_vel
+	else:
+		new_ragdoll.linear_velocity = Vector3(randf_range(-1.0, 1.0), 0, randf_range(-1.0, 1.0)).normalized() * 2
+	
+	new_ragdoll.angular_velocity = Vector3(randf_range(-5.0, 5.0), randf_range(-5.0, 5.0), randf_range(-5.0, 5.0))
