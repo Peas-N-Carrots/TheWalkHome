@@ -11,7 +11,7 @@ const COYOTE_TIME = 0.5
 const TRIP_VEL_THRESH = 0.7
 const FALL_VEL_THRESH = 10.0
 
-const TOTAL_TRIP_TIME = 20
+const TOTAL_TRIP_TIME = 150
 const MAX_WOBBLE = 0.005
 
 const FOOTSTEP_TIME = 0.4
@@ -68,7 +68,7 @@ func _input(event):
 func _physics_process(delta):
 	time += delta
 	
-	#update_trip_level()
+	update_trip_level()
 	
 	get_input()
 	

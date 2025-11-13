@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://dh5nb22s4p2lj"]
+[gd_scene load_steps=97 format=3 uid="uid://dh5nb22s4p2lj"]
 
 [ext_resource type="Script" uid="uid://dsxx1n5hskcnr" path="res://Levels/level.gd" id="1_24c1m"]
 [ext_resource type="PackedScene" uid="uid://dtl88uyktabio" path="res://Objects/Player/Player.tscn" id="2_wbw1h"]
@@ -62,17 +62,17 @@
 [ext_resource type="PackedScene" uid="uid://dsgcf1cffg15f" path="res://Assets/Objects/NewObjects/scn_storefront8.tscn" id="57_6unf6"]
 [ext_resource type="PackedScene" uid="uid://c8s8gd3pb3dny" path="res://Assets/Objects/NewObjects/scn_tollbooth.tscn" id="59_3i2c5"]
 [ext_resource type="PackedScene" uid="uid://dssawwaix0yre" path="res://Assets/Objects/NewObjects/scn_tunnel.tscn" id="59_g7xeu"]
-[ext_resource type="PackedScene" uid="uid://cjkmh0icvug2x" path="res://Assets/Objects/Grounds/scn_forestfloor3.tscn" id="59_mrklp"]
-[ext_resource type="PackedScene" path="res://Objects/Car/CarSpawner.tscn" id="59_r5ua0"]
-[ext_resource type="PackedScene" uid="uid://c42xqke2d04rj" path="res://Assets/Objects/Grounds/scn_forestfloor1.tscn" id="60_dekuj"]
-[ext_resource type="PackedScene" path="res://Objects/Car/CarDestroyer.tscn" id="60_mrklp"]
+[ext_resource type="PackedScene" path="res://Assets/Objects/Grounds/scn_forestfloor3.tscn" id="59_mrklp"]
+[ext_resource type="PackedScene" uid="uid://c1whlqwqk2kq3" path="res://Objects/Car/CarSpawner.tscn" id="59_r5ua0"]
+[ext_resource type="PackedScene" path="res://Assets/Objects/Grounds/scn_forestfloor1.tscn" id="60_dekuj"]
+[ext_resource type="PackedScene" uid="uid://itrxnlsvv8v7" path="res://Objects/Car/CarDestroyer.tscn" id="60_mrklp"]
 [ext_resource type="PackedScene" uid="uid://bfr4xt5bllat4" path="res://Assets/Objects/Rocks/scn_rock1.tscn" id="61_cgysn"]
 [ext_resource type="PackedScene" uid="uid://baxl1ybjxh363" path="res://Assets/Objects/Buildings/scn_windowstriple1.tscn" id="61_m763t"]
 [ext_resource type="PackedScene" uid="uid://b2225l0fjn4x3" path="res://Assets/Objects/Rocks/scn_rock3.tscn" id="62_ic8hk"]
 [ext_resource type="PackedScene" uid="uid://7yguklgqyeqd" path="res://Assets/Objects/Buildings/scn_windows2.tscn" id="62_lw25f"]
 [ext_resource type="PackedScene" uid="uid://niwkkfk04y8l" path="res://Assets/Objects/Graves/scn_grave1.tscn" id="63_illj5"]
 [ext_resource type="PackedScene" uid="uid://vemdoyr80bl6" path="res://Assets/Objects/Graves/scn_grave2.tscn" id="64_vihjc"]
-[ext_resource type="PackedScene" uid="uid://ci720av72ykru" path="res://Assets/Objects/Grounds/scn_forestfloor2.tscn" id="65_pmvo6"]
+[ext_resource type="PackedScene" path="res://Assets/Objects/Grounds/scn_forestfloor2.tscn" id="65_pmvo6"]
 [ext_resource type="PackedScene" uid="uid://dpaln70hcyg2f" path="res://Assets/Objects/Graves/scn_grave3.tscn" id="66_ic8hk"]
 [ext_resource type="PackedScene" uid="uid://cloe1qqbyqcsn" path="res://Assets/Objects/Graves/scn_grave4.tscn" id="67_illj5"]
 [ext_resource type="PackedScene" uid="uid://nvocswvnn4r4" path="res://Assets/Objects/Trees/scn_fallentree.tscn" id="68_illj5"]
@@ -104,17 +104,31 @@ volumetric_fog_emission_energy = 0.5
 _data = [Vector2(0, 0.539326), 0.0, 0.0, 0, 0, Vector2(0.765957, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_f1ogo"]
+frequency = 0.1434
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jlybi"]
+noise = SubResource("FastNoiseLite_f1ogo")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rkdml"]
+frequency = 0.2498
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lqoao"]
+noise = SubResource("FastNoiseLite_rkdml")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bds27"]
 render_priority = 0
 shader = ExtResource("3_63ltd")
-shader_parameter/water_color = Color(0.1, 0.3, 0.5, 0.8)
-shader_parameter/water_color_deep = Color(0.05, 0.15, 0.3, 1)
-shader_parameter/scroll_speed1 = Vector2(0.02, 0.01)
-shader_parameter/scroll_speed2 = Vector2(-0.015, 0.025)
-shader_parameter/wave_strength = 0.1
+shader_parameter/noise_texture1 = SubResource("NoiseTexture2D_jlybi")
+shader_parameter/noise_texture2 = SubResource("NoiseTexture2D_lqoao")
+shader_parameter/water_color = Color(0.52, 0.470253, 0.3068, 1)
+shader_parameter/water_color_deep = Color(0.39, 0.29575, 0.1638, 1)
+shader_parameter/scroll_speed1 = Vector2(0.002, 0.001)
+shader_parameter/scroll_speed2 = Vector2(-0.001, 0.003)
+shader_parameter/wave_strength = 1.0
 shader_parameter/noise_scale = 1.0
-shader_parameter/metallic = 0.8
-shader_parameter/roughness = 0.2
+shader_parameter/metallic = 0.0
+shader_parameter/roughness = 0.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bexhn"]
 material = SubResource("ShaderMaterial_bds27")
