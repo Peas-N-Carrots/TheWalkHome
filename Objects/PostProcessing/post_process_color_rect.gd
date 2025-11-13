@@ -38,3 +38,6 @@ func update(chroma: float, nausia: float, afterimage: float, vignette: float) ->
 	material.set_shader_parameter("NAUSIA_STRENGTH", nausia)
 	material.set_shader_parameter("AFTERIMAGE_STRENGTH", afterimage)
 	material.set_shader_parameter("VIGNETTE_STRENGTH", vignette)
+
+func fade(fade: float) -> void:
+	material.set_shader_parameter("FADE_LEVEL", fade)

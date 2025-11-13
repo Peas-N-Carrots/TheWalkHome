@@ -9,6 +9,8 @@ uniform float NAUSIA_STRENGTH: hint_range(0.0, 1.0) = 0.0;
 uniform float AFTERIMAGE_STRENGTH: hint_range(0.0, 1.0) = 0.0;
 uniform float VIGNETTE_STRENGTH: hint_range(0.0, 1.0) = 0.0;
 
+uniform float FADE_LEVEL: hint_range(0.0, 1.0) = 1.0;
+
 const float VIGNETTE_INTENSITY = 0.6;
 const float VIGNETTE_SOFTNESS = 0.1;
 
@@ -41,6 +43,9 @@ void fragment() {
 
 	// vignette
 	processed.rgb *= (1.0 - (smoothstep(VIGNETTE_SOFTNESS, VIGNETTE_INTENSITY, dist) * VIGNETTE_STRENGTH));
+
+	// fade
+	processed.rgb *= FADE_LEVEL;
 
 	// afterimage
 	processed.rgb = mix(processed.rgb, afterimage, AFTERIMAGE_BLEND * AFTERIMAGE_STRENGTH);

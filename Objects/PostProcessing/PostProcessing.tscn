@@ -10,6 +10,7 @@ shader_parameter/CHROMA_STRENGTH = 0.0
 shader_parameter/NAUSIA_STRENGTH = 0.0
 shader_parameter/AFTERIMAGE_STRENGTH = 0.0
 shader_parameter/VIGNETTE_STRENGTH = 0.0
+shader_parameter/FADE_LEVEL = 1.0
 
 [node name="PostProcessing" type="CanvasLayer"]
 
