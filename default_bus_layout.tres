@@ -1,0 +1,33 @@
+[gd_resource type="AudioBusLayout" load_steps=7 format=3 uid="uid://bw2clpsrx5iwo"]
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_j3pel"]
+resource_name = "Delay"
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
+resource_name = "LowPassFilter"
+
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
+resource_name = "PitchShift"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_j3pel"]
+resource_name = "Reverb"
+
+[sub_resource type="AudioEffectChorus" id="AudioEffectChorus_j3pel"]
+resource_name = "Chorus"
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_j3pel"]
+resource_name = "Distortion"
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectDelay_j3pel")
+bus/0/effect/0/enabled = false
+bus/0/effect/1/effect = SubResource("AudioEffectLowPassFilter_j3pel")
+bus/0/effect/1/enabled = true
+bus/0/effect/2/effect = SubResource("AudioEffectPitchShift_j3pel")
+bus/0/effect/2/enabled = false
+bus/0/effect/3/effect = SubResource("AudioEffectReverb_j3pel")
+bus/0/effect/3/enabled = true
+bus/0/effect/4/effect = SubResource("AudioEffectChorus_j3pel")
+bus/0/effect/4/enabled = false
+bus/0/effect/5/effect = SubResource("AudioEffectDistortion_j3pel")
+bus/0/effect/5/enabled = false

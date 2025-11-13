@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dtl88uyktabio"]
+[gd_scene load_steps=26 format=3 uid="uid://dtl88uyktabio"]
 
 [ext_resource type="Script" uid="uid://csqohn7devma4" path="res://Objects/Player/player.gd" id="1_xhfnw"]
 [ext_resource type="ArrayMesh" uid="uid://wcmtik8cmkd1" path="res://Objects/Player/sm_guy.obj" id="2_oansn"]
@@ -25,6 +25,14 @@ point_count = 2
 
 [sub_resource type="Curve" id="Curve_b0me6"]
 _data = [Vector2(0.180851, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_ebgc0"]
+_data = [Vector2(0, 0.269663), 0.0, 0.0, 0, 0, Vector2(0.755319, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_1ggq4"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0rwas"]
@@ -64,6 +72,8 @@ wobble_curve = SubResource("Curve_we6tp")
 chroma_curve = SubResource("Curve_oansn")
 nausia_curve = SubResource("Curve_cac6a")
 afterimage_curve = SubResource("Curve_b0me6")
+vignette_curve = SubResource("Curve_ebgc0")
+audio_curve = SubResource("Curve_1ggq4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_0rwas")

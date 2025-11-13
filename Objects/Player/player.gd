@@ -11,7 +11,7 @@ const COYOTE_TIME = 0.5
 const TRIP_VEL_THRESH = 0.7
 const FALL_VEL_THRESH = 10.0
 
-const TOTAL_TRIP_TIME = 200
+const TOTAL_TRIP_TIME = 15 # 200
 const MAX_WOBBLE = 0.005
 
 const FOOTSTEP_TIME = 0.4
@@ -27,6 +27,43 @@ var trip_level : float = 0.0
 @export var afterimage_curve : Curve
 @export var vignette_curve : Curve
 @onready var shader = get_tree().root.find_child("ColorRect", true, false);
+
+@export var audio_curve : Curve
+@onready var bus_idx = AudioServer.get_bus_index("Master")
+enum effect_id {
+	DELAY, LOWPASS, PITCHSHIFT, REVERB, CHORUS, DISTORTION
+}
+@onready var effects : Dictionary = {
+	effect_id.DELAY : AudioServer.get_bus_effect(bus_idx, effect_id.DELAY),
+	effect_id.LOWPASS : AudioServer.get_bus_effect(bus_idx, effect_id.LOWPASS),
+	effect_id.PITCHSHIFT : AudioServer.get_bus_effect(bus_idx, effect_id.PITCHSHIFT),
+	effect_id.REVERB : AudioServer.get_bus_effect(bus_idx, effect_id.REVERB),
+	effect_id.CHORUS : AudioServer.get_bus_effect(bus_idx, effect_id.CHORUS),
+	effect_id.DISTORTION : AudioServer.get_bus_effect(bus_idx, effect_id.DISTORTION)
+}
+# Pitch Shift
+const AUDIO_PITCH_SCALE = Vector2(1.0, 0.85)
+# LPF
+const AUDIO_LPF_CUTOFF = Vector2(20000, 2000)
+const AUDIO_LPF_RESONANCE = Vector2(0.5, 0.7)
+# Reverb
+const AUDIO_REVERB_ROOMSIZE = Vector2(0.2, 0.8)
+const AUDIO_REVERB_DAMPING = Vector2(0.5, 0.3)
+const AUDIO_REVERB_WET = Vector2(0.0, 0.4)
+const AUDIO_REVERB_DRY = Vector2(1.0, 0.7)
+# Chorus
+const AUDIO_CHORUS_VOICE_COUNT = Vector2(2, 4)
+const AUDIO_CHORUS_RATE_HZ = Vector2(0.5, 2.0)
+const AUDIO_CHORUS_DEPTH_MS = Vector2(2.0, 8.0)
+const AUDIO_CHORUS_WET = Vector2(0.0, 0.3)
+# Delay
+const AUDIO_DELAY_TAP1_MS = Vector2(0, 50)
+const AUDIO_DELAY_TAP1_LEVEL_DB = Vector2(-60, -12)
+const AUDIO_DELAY_FEEDBACK_LEVEL_DB = Vector2(-60, -20)
+# Distortion
+const AUDIO_DISTORTION_PRE_GAIN = Vector2(0.0, 3.0)
+const AUDIO_DISTORTION_DRIVE = Vector2(0.0, 0.1)
+const AUDIO_DISTORTION_POST_GAIN = Vector2(0.0, -2.0)
 
 var time := 1.0
 
@@ -55,7 +92,7 @@ func _ready():
 	body_area.body_entered.connect(_on_body_area_enter)
 	body_area.body_exited.connect(_on_body_area_exit)
 	
-	update_trip_level()
+	set_trip_level(0.0)
 	
 	$AudioAbience.play()
 
@@ -107,6 +144,15 @@ func calc_trip_level(t: float) -> float:
 func set_trip_level(level: float) -> void:
 	trip_level = level
 	shader.update(chroma_curve.sample(trip_level), nausia_curve.sample(trip_level), afterimage_curve.sample(trip_level), vignette_curve.sample(trip_level))
+	update_audio(audio_curve.sample(trip_level))
+
+func update_audio(progress: float) -> void:
+	effects[effect_id.LOWPASS].cutoff_hz = lerpf(AUDIO_LPF_CUTOFF[0], AUDIO_LPF_CUTOFF[1], progress)
+	effects[effect_id.LOWPASS].resonance = lerpf(AUDIO_LPF_RESONANCE[0], AUDIO_LPF_RESONANCE[1], progress)
+	effects[effect_id.REVERB].room_size = lerpf(AUDIO_REVERB_ROOMSIZE[0], AUDIO_REVERB_ROOMSIZE[1], progress)
+	effects[effect_id.REVERB].damping = lerpf(AUDIO_REVERB_DAMPING[0], AUDIO_REVERB_DAMPING[1], progress)
+	effects[effect_id.REVERB].wet = lerpf(AUDIO_REVERB_WET[0], AUDIO_REVERB_WET[1], progress)
+	effects[effect_id.REVERB].dry = lerpf(AUDIO_REVERB_DRY[0], AUDIO_REVERB_DRY[1], progress)
 
 func get_jump_frame() -> bool:
 	return time - jump_frame < JUMP_BUFFER
