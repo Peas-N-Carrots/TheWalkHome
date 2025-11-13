@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://lx4wxaqy53u"]
+[gd_scene load_steps=8 format=3 uid="uid://lx4wxaqy53u"]
 
 [ext_resource type="Script" uid="uid://ce64gnalqi8wm" path="res://Objects/Car/car.gd" id="1_7jeou"]
 [ext_resource type="PackedScene" uid="uid://o72603tyy2g7" path="res://Assets/Objects/Vehicles/scn_car.tscn" id="1_d3qn3"]
 [ext_resource type="AudioStream" uid="uid://c0uro88wpbr5f" path="res://SFX/loopable-car-interior-driving-with-wipers-in-rain-366316.mp3" id="3_asns1"]
+[ext_resource type="AudioStream" uid="uid://h82jrhew171t" path="res://SFX/automobile-horn-153260.mp3" id="4_slanq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7jeou"]
 size = Vector3(1.7592, 1.39014, 4.29767)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_asns1"]
+size = Vector3(2.86548, 1.38562, 14.9677)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d3qn3"]
 size = Vector3(1.68793, 1.31067, 4.17578)
@@ -25,12 +29,26 @@ collision_mask = 8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00158405, 0.68752, -0.00875854)
 shape = SubResource("BoxShape3D_7jeou")
 
+[node name="AreaHonk" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaHonk"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0152588, 0.693116, 9.9802)
+shape = SubResource("BoxShape3D_asns1")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00424194, 0.649028, -0.00976563)
 shape = SubResource("BoxShape3D_d3qn3")
 
 [node name="AudioDrive" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_asns1")
+volume_db = 15.0
+doppler_tracking = 2
+
+[node name="AudioHonk" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_slanq")
 volume_db = 10.0
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="AreaHonk" to="." method="_on_area_honk_body_entered"]

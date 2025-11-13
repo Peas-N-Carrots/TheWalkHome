@@ -19,3 +19,7 @@ func destroy_car() -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.has_method("die"):
 		body.die()
+
+func _on_area_honk_body_entered(body: Node3D) -> void:
+	if body.has_method("die"):
+		$AudioHonk.play()

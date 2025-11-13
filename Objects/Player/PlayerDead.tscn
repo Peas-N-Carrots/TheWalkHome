@@ -56,3 +56,4 @@ surface_material_override/4 = SubResource("StandardMaterial3D_n3se1")
 
 [node name="AudioImpact" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("8_jg8hi")
+volume_db = -5.0

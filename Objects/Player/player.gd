@@ -190,3 +190,6 @@ func spawn_ragdoll(p_vel: Vector3 = Vector3.ZERO) -> void:
 		new_ragdoll.linear_velocity = Vector3(randf_range(-1.0, 1.0), 0, randf_range(-1.0, 1.0)).normalized() * 2
 	
 	new_ragdoll.angular_velocity = Vector3(randf_range(-5.0, 5.0), randf_range(-5.0, 5.0), randf_range(-5.0, 5.0))
+
+func win_game() -> void:
+	print("Won!")

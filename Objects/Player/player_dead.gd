@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-const MIN_VEL = 2.0
+const MIN_VEL = 1.0
 
 var p_vel = Vector3.ZERO
 
