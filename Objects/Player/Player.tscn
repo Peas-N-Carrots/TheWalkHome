@@ -12,19 +12,19 @@
 [ext_resource type="AudioStream" uid="uid://dip6483gic4wa" path="res://SFX/night-ambience-17064.mp3" id="10_ebgc0"]
 
 [sub_resource type="Curve" id="Curve_we6tp"]
-_data = [Vector2(0.228723, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.0585106, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_oansn"]
-_data = [Vector2(0.143617, 0), 0.0, 0.0, 0, 0, Vector2(0.68617, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.159574, 0.157303), 0.0, 0.0, 0, 0, Vector2(0.68617, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_cac6a"]
-_data = [Vector2(0.106383, 0), 0.0, 0.0, 0, 0, Vector2(0.776596, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.101064, 0.134832), 0.0, 0.0, 0, 0, Vector2(0.776596, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Curve" id="Curve_b0me6"]
-_data = [Vector2(0.244681, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.180851, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0rwas"]
@@ -32,10 +32,10 @@ point_count = 2
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kpjcp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xhfnw"]
-size = Vector3(0.503082, 0.390567, 0.569031)
+size = Vector3(0.503082, 0.284715, 0.528656)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kpjcp"]
-size = Vector3(0.478287, 0.733443, 0.61978)
+size = Vector3(0.478287, 0.951194, 0.717605)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q10m3"]
 albedo_texture = ExtResource("3_nd6ml")
@@ -83,7 +83,7 @@ collision_layer = 0
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TripCheck/FootArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00267029, 0.0679604, 0.215485)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00267029, 0.147632, 0.235672)
 shape = SubResource("BoxShape3D_xhfnw")
 
 [node name="BodyArea" type="Area3D" parent="TripCheck"]
@@ -92,7 +92,7 @@ collision_layer = 0
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TripCheck/BodyArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000282288, 0.853238, 0.179441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000282288, 0.744362, 0.130529)
 shape = SubResource("BoxShape3D_kpjcp")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]

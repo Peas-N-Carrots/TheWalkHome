@@ -8,10 +8,10 @@ const MOUSE_SENSITIVITY = 0.0015
 const JUMP_BUFFER = 0.5
 const COYOTE_TIME = 0.5
 
-const TRIP_VEL_THRESH = 0.7
+const TRIP_VEL_THRESH = 0.75
 const FALL_VEL_THRESH = 10.0
 
-const TOTAL_TRIP_TIME = 150
+const TOTAL_TRIP_TIME = 200
 const MAX_WOBBLE = 0.005
 
 const FOOTSTEP_TIME = 0.4
@@ -98,7 +98,7 @@ func footstep_audio(delta: float) -> void:
 		walk_time = FOOTSTEP_TIME/2
 
 func update_trip_level() -> void:
-	if (calc_trip_level(time) - trip_level > 0.01 || (calc_trip_level(time) == 1.0 && trip_level != 1.0)):
+	if (calc_trip_level(time) - trip_level > 0.005 || (calc_trip_level(time) == 1.0 && trip_level != 1.0)):
 		set_trip_level(calc_trip_level(time))
 
 func calc_trip_level(t: float) -> float:

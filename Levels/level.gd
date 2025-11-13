@@ -10,10 +10,22 @@ var player_dead : bool = false
 var die_f : float = 0.0
 var fade_f : float = 0.0
 
+var fullscreen := false
+
 @onready var player = get_tree().root.find_child("CharacterBody3D", true, false);
 @onready var shader = get_tree().root.find_child("ColorRect", true, false);
 
 func _process(delta: float) -> void:
+	if Input.is_action_pressed("Quit"):
+		get_tree().quit()
+	
+	if Input.is_action_pressed("Fullscreen"):
+		if fullscreen:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		fullscreen = !fullscreen
+	
 	if start_f < FADE_T:
 		start_f += delta
 		
